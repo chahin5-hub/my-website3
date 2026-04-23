@@ -1,13 +1,12 @@
-/* RESET */
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
     font-family:'Cairo',sans-serif;
     background:#f5f7fa;
+    transition:0.3s;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
     position:fixed;
     top:0;
@@ -20,39 +19,52 @@ nav{
     z-index:1000;
 }
 
-nav a{
-    margin:0 10px;
-    text-decoration:none;
-    color:#333;
-    transition:0.3s;
-}
-
-nav a:hover{color:#ff5a3c}
+nav a{margin:0 10px;text-decoration:none;color:#333}
 
 /* HERO */
 .hero{
+    position:relative;
     height:100vh;
-    background:linear-gradient(135deg,#ff5a3c,#ff9966);
+    background:linear-gradient(270deg,#ff5a3c,#ff9966,#ff5a3c);
+    background-size:600% 600%;
+    animation:gradientBG 10s ease infinite;
     display:flex;
     align-items:center;
     justify-content:center;
+    text-align:center;
     color:white;
-    text-align:center;
 }
 
-/* SECTIONS */
-.section{
-    padding:100px 20px;
-    text-align:center;
+/* اسم */
+.main-name{
+    font-size:70px;
+    letter-spacing:5px;
+    text-shadow:0 0 10px #fff,0 0 40px #ff5a3c;
+    animation:float 3s infinite,neon 1.5s infinite alternate;
 }
 
-/* CARDS */
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+@keyframes float{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-15px)}
+    100%{transform:translateY(0)}
 }
+
+@keyframes neon{
+    from{text-shadow:0 0 10px #ff5a3c}
+    to{text-shadow:0 0 30px #ff9966}
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Sections */
+.section{padding:100px 20px;text-align:center}
+
+/* Cards */
+.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
 
 .card{
     background:white;
@@ -62,27 +74,12 @@ nav a:hover{color:#ff5a3c}
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
     transition:0.3s;
 }
+.card:hover{transform:translateY(-10px)}
 
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* ANIMATION */
-.hidden{
-    opacity:0;
-    transform:translateY(50px);
-    transition:0.6s;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* FORM */
+/* Form */
 input,textarea{
     width:80%;
-    padding:12px;
+    padding:10px;
     margin:10px;
     border-radius:10px;
     border:1px solid #ccc;
@@ -96,7 +93,30 @@ button{
     border-radius:10px;
 }
 
-/* WHATSAPP */
+/* Dark */
+.dark{background:#111;color:white}
+.dark nav{background:#222}
+.dark .card{background:#1a1a1a}
+
+/* Toggle */
+.toggle{
+    cursor:pointer;
+    background:#ff5a3c;
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+}
+
+/* Cursor */
+.cursor{
+    width:20px;height:20px;
+    border:2px solid #ff5a3c;
+    border-radius:50%;
+    position:fixed;
+    pointer-events:none;
+}
+
+/* WhatsApp */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -105,5 +125,4 @@ button{
     color:white;
     padding:15px;
     border-radius:50%;
-    text-decoration:none;
 }
