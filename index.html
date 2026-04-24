@@ -1,29 +1,149 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>الرئيسية</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شاهين | تصميم مواقع</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: #f5f7fa;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff5a3c, #ff9966);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.btn {
+    background: white;
+    color: #ff5a3c;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-    <h2>شاهين</h2>
+    <h3>شاهين</h3>
     <div>
-        <a href="index.html">الرئيسية</a>
-        <a href="services.html">الخدمات</a>
-        <a href="portfolio.html">الأعمال</a>
-        <a href="contact.html">تواصل</a>
+        <a href="#">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#about">من أنا</a>
     </div>
 </nav>
 
-<div class="container">
-    <h1>مرحبا بك في موقعي 👋</h1>
-    <p>أنا مصمم مواقع احترافية</p>
-    <a href="services.html" class="btn">استكشف خدماتي</a>
+<div class="hero">
+    <div>
+        <h1>أصمم لك موقع احترافي 🚀</h1>
+        <p>حوّل فكرتك إلى موقع عصري وجذاب</p>
+        <a href="#services" class="btn">ابدأ الآن</a>
+    </div>
 </div>
+
+<div class="section" id="services">
+    <h2>خدماتي</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>مواقع أعمال</h3>
+            <p>تصميم مواقع للشركات</p>
+        </div>
+        <div class="card">
+            <h3>مواقع شخصية</h3>
+            <p>صفحات تعريفية احترافية</p>
+        </div>
+        <div class="card">
+            <h3>متاجر</h3>
+            <p>متاجر إلكترونية بسيطة</p>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="about">
+    <h2>من أنا؟</h2>
+    <p>أنا شاهين، مطور ومصمم مواقع من الجزائر 🇩🇿</p>
+    <p>أساعدك في إنشاء موقع احترافي بسهولة</p>
+</div>
+
+<a class="whatsapp" href="https://wa.me/213XXXXXXXXX" target="_blank">
+💬
+</a>
 
 </body>
 </html>
