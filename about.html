@@ -2,220 +2,23 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>من أنا | شاهين</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* ====== GLOBAL ====== */
-body{
-    margin:0;
-    font-family:'Cairo',sans-serif;
-    background:#0f172a;
-    color:white;
-    overflow-x:hidden;
-}
-
-/* ====== BACKGROUND ANIMATION ====== */
-body::before{
-    content:"";
-    position:fixed;
-    width:200%;
-    height:200%;
-    background: radial-gradient(circle, #ff5a3c33, transparent);
-    animation: moveBg 10s linear infinite;
-    z-index:-1;
-}
-
-@keyframes moveBg{
-    0%{transform:translate(0,0);}
-    50%{transform:translate(-25%, -25%);}
-    100%{transform:translate(0,0);}
-}
-
-/* ===== NAVBAR ===== */
-nav{
-    position:fixed;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    padding:15px 40px;
-    background:rgba(0,0,0,0.4);
-    backdrop-filter:blur(10px);
-}
-
-nav h2{
-    color:#ff5a3c;
-}
-
-/* ===== HERO ===== */
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-/* NEON NAME */
-.name{
-    font-size:60px;
-    color:#fff;
-    text-shadow:
-    0 0 10px #ff5a3c,
-    0 0 20px #ff5a3c,
-    0 0 40px #ff5a3c;
-}
-
-/* ===== TYPING ===== */
-.typing{
-    font-size:25px;
-    margin-top:15px;
-    color:#ccc;
-}
-
-/* ===== SECTION ===== */
-.section{
-    padding:80px 20px;
-    text-align:center;
-    opacity:0;
-    transform:translateY(50px);
-    transition:0.6s;
-}
-
-.section.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* ===== CARDS ===== */
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.card{
-    background:#1e293b;
-    padding:25px;
-    width:260px;
-    border-radius:15px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 20px #ff5a3c;
-}
-
-/* ===== SKILLS ===== */
-.skill{
-    width:80%;
-    margin:15px auto;
-    background:#333;
-    border-radius:10px;
-}
-
-.skill span{
-    display:block;
-    height:10px;
-    background:#ff5a3c;
-    border-radius:10px;
-}
-
-/* ===== CTA ===== */
-.cta{
-    background:#ff5a3c;
-    padding:50px;
-    text-align:center;
-}
-
-button{
-    padding:15px 30px;
-    border:none;
-    border-radius:25px;
-    background:black;
-    color:white;
-    cursor:pointer;
-}
-
-/* ===== CURSOR ===== */
-.cursor{
-    width:20px;
-    height:20px;
-    border:2px solid #ff5a3c;
-    border-radius:50%;
-    position:fixed;
-    pointer-events:none;
-    transform:translate(-50%,-50%);
-}
-
-</style>
+<title>من أنا</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="cursor"></div>
-
 <nav>
-<h2>شاهين</h2>
+<h2 class="logo">شاهين</h2>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-<div>
-<h1 class="name">شاهين</h1>
-<p class="typing" id="typing"></p>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-<h2>من أنا؟</h2>
-<p>
-أنا شاهين، مطور ومصمم مواقع. أحول أفكارك إلى مواقع احترافية
-بشكل عصري وسريع لجذب العملاء.
+<h1 class="neon">من أنا؟</h1>
+<p class="center-text">
+أنا شاهين، مطور ومصمم مواقع من الجزائر 🇩🇿  
+أحول أفكارك إلى مواقع احترافية تجذب العملاء
 </p>
 </section>
-
-<!-- SKILLS -->
-<section class="section">
-<h2>مهاراتي</h2>
-
-<div class="skill"><span style="width:95%"></span></div>
-<p>تصميم مواقع</p>
-
-<div class="skill"><span style="width:85%"></span></div>
-<p>HTML & CSS</p>
-
-<div class="skill"><span style="width:75%"></span></div>
-<p>JavaScript</p>
-
-</section>
-
-<!-- SERVICES -->
-<section class="section">
-<h2>خدماتي</h2>
-
-<div class="cards">
-<div class="card">💻 مواقع احترافية</div>
-<div class="card">🎨 تصميم عصري</div>
-<div class="card">🚀 سرعة عالية</div>
-</div>
-
-</section>
-
-<!-- CTA -->
-<section class="cta">
-<h2>ابدأ مشروعك الآن</h2>
-<button onclick="window.location.href='contact.html'">تواصل معي</button>
-</section>
-
-<script src="script.js"></script>
 
 </body>
 </html>
