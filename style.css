@@ -3,26 +3,19 @@ margin:0;
 font-family:Arial;
 background:#0f172a;
 color:white;
-scroll-behavior:smooth;
+text-align:center;
 }
 
 /* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-padding:15px 40px;
+padding:15px 30px;
 background:#020617;
-position:fixed;
-width:100%;
-z-index:1000;
-}
-
-.menu{
-display:flex;
-gap:20px;
 }
 
 .menu a{
+margin:0 10px;
 color:white;
 text-decoration:none;
 }
@@ -38,97 +31,45 @@ background:linear-gradient(135deg,#ff5a3c,#ff9966);
 }
 
 .hero h1{
-font-size:60px;
-animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-from{ text-shadow:0 0 10px white;}
-to{ text-shadow:0 0 40px yellow;}
+font-size:50px;
 }
 
 /* BUTTON */
 .btn{
 background:white;
 color:#ff5a3c;
-padding:12px 25px;
-border-radius:25px;
+padding:10px 20px;
+border-radius:20px;
 text-decoration:none;
 }
 
 /* SECTION */
 .section{
-padding:80px 20px;
-text-align:center;
+padding:60px;
 }
 
 /* CARDS */
 .cards{
 display:flex;
-gap:20px;
 justify-content:center;
+gap:20px;
 flex-wrap:wrap;
 }
 
 .card{
 background:#1e293b;
 padding:20px;
-border-radius:15px;
-transition:0.3s;
+border-radius:10px;
 }
 
-.card:hover{
-transform:scale(1.1);
-}
-
-/* CTA */
-.cta{
-background:#ff5a3c;
-padding:60px;
-}
-
-/* SCROLL ANIMATION */
-.reveal{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-/* TOP BUTTON */
-#topBtn{
+/* WHATSAPP */
+.whatsapp-float{
 position:fixed;
 bottom:20px;
 left:20px;
-padding:10px;
-border:none;
-border-radius:50%;
-background:#ff5a3c;
+background:#25d366;
 color:white;
-cursor:pointer;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.menu{
-display:none;
-flex-direction:column;
-background:#020617;
-position:absolute;
-top:60px;
-right:0;
-width:100%;
-}
-
-.menu.active{
-display:flex;
-}
-
-.menu-btn{
-display:block;
-}
+font-size:25px;
+padding:15px;
+border-radius:50%;
 }
