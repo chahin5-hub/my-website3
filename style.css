@@ -1,70 +1,132 @@
-*{margin:0;padding:0;box-sizing:border-box}
+/* ====== GENERAL ====== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
 body{
-    font-family:'Cairo',sans-serif;
     background:#f5f7fa;
+    color:#333;
     transition:0.3s;
 }
 
-/* NAV */
+/* ====== DARK MODE ====== */
+.dark{
+    background:#0f172a;
+    color:#eee;
+}
+
+/* ====== NAV ====== */
 nav{
     position:fixed;
     top:0;
     width:100%;
-    background:white;
     display:flex;
     justify-content:space-between;
+    align-items:center;
     padding:15px 40px;
-    box-shadow:0 2px 15px rgba(0,0,0,0.1);
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
     z-index:1000;
 }
 
-nav a{margin:0 10px;text-decoration:none;color:#333}
+.dark nav{
+    background:#1e293b;
+}
 
-/* HERO */
-.hero{
-    position:relative;
-    height:100vh;
-    background:linear-gradient(270deg,#ff5a3c,#ff9966,#ff5a3c);
-    background-size:600% 600%;
-    animation:gradientBG 10s ease infinite;
+nav h2{
+    font-size:22px;
+    color:#ff5a3c;
+}
+
+/* MENU */
+.menu{
     display:flex;
-    align-items:center;
+    gap:20px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ff5a3c;
+}
+
+/* MENU BTN */
+.menu-btn{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* TOGGLE */
+.toggle{
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* ====== HERO ====== */
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#ff5a3c,#ff9966);
+    display:flex;
     justify-content:center;
+    align-items:center;
     text-align:center;
     color:white;
 }
 
-/* اسم */
 .main-name{
-    font-size:70px;
-    letter-spacing:5px;
-    text-shadow:0 0 10px #fff,0 0 40px #ff5a3c;
-    animation:float 3s infinite,neon 1.5s infinite alternate;
+    font-size:60px;
+    margin-bottom:10px;
+    animation: glow 2s infinite alternate;
 }
 
-@keyframes float{
-    0%{transform:translateY(0)}
-    50%{transform:translateY(-15px)}
-    100%{transform:translateY(0)}
+@keyframes glow{
+    from{ text-shadow:0 0 10px #fff; }
+    to{ text-shadow:0 0 25px #fff; }
 }
 
-@keyframes neon{
-    from{text-shadow:0 0 10px #ff5a3c}
-    to{text-shadow:0 0 30px #ff9966}
+.hero button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff5a3c;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-@keyframes gradientBG{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+.hero button:hover{
+    transform:scale(1.1);
 }
 
-/* Sections */
-.section{padding:100px 20px;text-align:center}
+/* ====== SECTION ====== */
+.section{
+    padding:80px 20px;
+    text-align:center;
+}
 
-/* Cards */
-.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.section h2{
+    margin-bottom:40px;
+    font-size:28px;
+}
+
+/* ====== CARDS ====== */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
 
 .card{
     background:white;
@@ -74,68 +136,68 @@ nav a{margin:0 10px;text-decoration:none;color:#333}
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
     transition:0.3s;
 }
-.card:hover{transform:translateY(-10px)}
 
-/* Form */
-input,textarea{
-    width:80%;
-    padding:10px;
-    margin:10px;
-    border-radius:10px;
-    border:1px solid #ccc;
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
 }
 
-button{
+/* ====== CTA ====== */
+.cta{
+    background:#ff5a3c;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.cta button{
+    margin-top:20px;
     padding:12px 25px;
-    background:#ff5a3c;
-    color:white;
     border:none;
-    border-radius:10px;
-}
-
-/* Dark */
-.dark{background:#111;color:white}
-.dark nav{background:#222}
-.dark .card{background:#1a1a1a}
-
-/* Toggle */
-.toggle{
+    border-radius:30px;
+    background:white;
+    color:#ff5a3c;
+    font-weight:bold;
     cursor:pointer;
-    background:#ff5a3c;
-    color:white;
-    padding:5px 10px;
-    border-radius:15px;
 }
 
-/* Cursor */
-.cursor{
-    width:20px;height:20px;
-    border:2px solid #ff5a3c;
-    border-radius:50%;
-    position:fixed;
-    pointer-events:none;
-}
-
-/* WhatsApp */
+/* ====== WHATSAPP ====== */
 .whatsapp{
     position:fixed;
     bottom:20px;
-    right:20px;
-    background:#25D366;
+    left:20px;
+    background:#25d366;
     color:white;
     padding:15px;
     border-radius:50%;
-}/* 📱 موبايل */
-@media (max-width: 768px){
+    font-size:20px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ====== RESPONSIVE ====== */
+@media(max-width:768px){
 
     nav{
-        flex-direction: column;
-        text-align: center;
+        padding:15px;
     }
 
-    .cards{
-        flex-direction: column;
-        align-items: center;
+    .menu{
+        display:none;
+        flex-direction:column;
+        background:white;
+        position:absolute;
+        top:60px;
+        right:10px;
+        padding:15px;
+        border-radius:10px;
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
     }
 
     .main-name{
@@ -143,7 +205,7 @@ button{
     }
 
     .hero{
-        height:70vh;
+        height:80vh;
     }
 
 }
