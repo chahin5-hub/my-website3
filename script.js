@@ -31,4 +31,10 @@ document.body.appendChild(cursor);
 document.addEventListener("mousemove",(e)=>{
 cursor.style.left=e.clientX+"px";
 cursor.style.top=e.clientY+"px";
-});
+function toggleMenu(){
+    document.querySelector(".menu").classList.toggle("active");
+}
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}});
