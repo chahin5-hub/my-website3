@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shaheen Platform 👑</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-
+<title>شاهين | مصمم مواقع</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,58 +11,44 @@
 
 <div class="cursor"></div>
 
-<!-- NAV -->
 <nav>
 <h2 class="logo">شاهين</h2>
 
+<span class="menu-btn" onclick="toggleMenu()">☰</span>
+
 <div class="menu">
-<a href="#">الرئيسية</a>
-<a href="#">الخدمات</a>
-<a href="#">أعمالي</a>
-<a href="#">تواصل</a>
+<a href="index.html">الرئيسية</a>
+<a href="services.html">الخدمات</a>
+<a href="portfolio.html">الأعمال</a>
+<a href="about.html">من أنا</a>
+<a href="contact.html">تواصل</a>
 </div>
 
-<button class="btn">ابدأ الآن</button>
+<span class="toggle" onclick="toggleDark()">🌙</span>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
 <div>
-<h1 class="neon">SHAHEEN</h1>
+<h1 class="neon" id="name"></h1>
 <p id="typing"></p>
 </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section">
-<h2>🔥 خدماتي</h2>
+<h2>خدماتي 🔥</h2>
 
 <div class="cards">
-
-<div class="card">
-<h3>تصميم مواقع</h3>
-<p>مواقع احترافية بسرعة عالية</p>
-<button>اطلب الآن</button>
-</div>
-
-<div class="card">
-<h3>متاجر إلكترونية</h3>
-<p>بيع منتجاتك بسهولة</p>
-<button>اطلب الآن</button>
-</div>
-
-<div class="card">
-<h3>تصميم UI</h3>
-<p>تصميم عصري جذاب</p>
-<button>اطلب الآن</button>
-</div>
-
+<div class="card">💻 تصميم مواقع</div>
+<div class="card">🎨 تصميم احترافي</div>
+<div class="card">🚀 سرعة عالية</div>
 </div>
 </section>
 
 <!-- PORTFOLIO -->
 <section class="section">
-<h2>🎨 أعمالي</h2>
+<h2>أعمالي 🎨</h2>
 
 <div class="cards">
 <div class="card">مشروع 1</div>
@@ -76,8 +59,8 @@
 
 <!-- CTA -->
 <section class="cta">
-<h2>جاهز تبدأ مشروعك؟</h2>
-<button>تواصل معي</button>
+<h2>ابدأ مشروعك الآن</h2>
+<button onclick="window.location.href='contact.html'">تواصل معي</button>
 </section>
 
 <script src="script.js"></script>
