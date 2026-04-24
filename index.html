@@ -4,7 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>شاهين | مصمم مواقع</title>
-<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+}
+
+/* NAV */
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:#111827;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+z-index:1000;
+}
+
+nav h2{
+color:#ff5a3c;
+}
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+}
+
+.menu-btn{
+display:none;
+font-size:25px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#ff5a3c,#ff9966);
+}
+
+.main-name{
+font-size:50px;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #fff;}
+to{ text-shadow:0 0 30px #000;}
+}
+
+/* SECTION */
+section{
+padding:70px 20px;
+}
+
+.title{
+text-align:center;
+font-size:30px;
+margin-bottom:30px;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+width:250px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+}
+
+/* SKILLS */
+.skill{
+width:80%;
+margin:20px auto;
+}
+
+.bar{
+background:#333;
+height:10px;
+border-radius:10px;
+}
+
+.bar span{
+display:block;
+height:10px;
+background:#ff5a3c;
+border-radius:10px;
+}
+
+/* CTA */
+.cta{
+background:#ff5a3c;
+text-align:center;
+padding:50px;
+}
+
+.btn{
+background:white;
+color:#ff5a3c;
+padding:12px 25px;
+text-decoration:none;
+border-radius:30px;
+display:inline-block;
+margin-top:10px;
+}
+
+/* WhatsApp */
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25d366;
+padding:15px;
+border-radius:50%;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.menu{
+display:none;
+flex-direction:column;
+background:#111827;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+.main-name{
+font-size:35px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -16,14 +201,13 @@
 
 <div class="menu">
 <a href="#">الرئيسية</a>
-<a href="services.html">الخدمات</a>
-<a href="portfolio.html">الأعمال</a>
-<a href="pricing.html">الأسعار</a>
-<a href="about.html">من أنا</a>
-<a href="contact.html">تواصل</a>
+<a href="#">الخدمات</a>
+<a href="#">الأعمال</a>
+<a href="#">الأسعار</a>
+<a href="#">من أنا</a>
+<a href="#">تواصل</a>
 </div>
 
-<span onclick="toggleDark()">🌙</span>
 </nav>
 
 <!-- HERO -->
@@ -31,7 +215,7 @@
 <div>
 <h1 id="name" class="main-name"></h1>
 <p>🚀 أصمم مواقع احترافية تجذب العملاء وتزيد أرباحك</p>
-<a href="contact.html" class="btn">ابدأ الآن</a>
+<a href="#" class="btn">ابدأ الآن</a>
 </div>
 </section>
 
@@ -98,7 +282,7 @@
 <div class="cards">
 <div class="card">+50 مشروع</div>
 <div class="card">+30 عميل</div>
-<div class="card">خبرة 2 سنوات</div>
+<div class="card">خبرة سنتين</div>
 </div>
 
 </section>
@@ -132,13 +316,33 @@
 <section class="cta">
 <h2>🔥 جاهز لإطلاق موقعك؟</h2>
 <p>ابدأ الآن وسأحول فكرتك إلى موقع احترافي</p>
-<a href="contact.html" class="btn">تواصل معي</a>
+<a href="#" class="btn">تواصل معي</a>
 </section>
 
-<!-- WhatsApp -->
-<a class="whatsapp" href="https://wa.me/213XXXXXXXXX">💬</a>
+<a class="whatsapp" href="#">💬</a>
 
-<script src="script.js"></script>
+<script>
+
+// كتابة الاسم
+const text="شاهين";
+let i=0;
+const el=document.getElementById("name");
+
+function typing(){
+if(el && i<text.length){
+el.innerHTML+=text[i];
+i++;
+setTimeout(typing,150);
+}
+}
+typing();
+
+// menu
+function toggleMenu(){
+document.querySelector(".menu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
