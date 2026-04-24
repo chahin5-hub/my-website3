@@ -125,4 +125,25 @@ button{
     color:white;
     padding:15px;
     border-radius:50%;
+}/* 📱 موبايل */
+@media (max-width: 768px){
+
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-name{
+        font-size:40px;
+    }
+
+    .hero{
+        height:70vh;
+    }
+
 }
