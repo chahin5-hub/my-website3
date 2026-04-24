@@ -2,7 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>شاهين</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,6 +12,9 @@
 
 <nav>
 <h2>شاهين</h2>
+
+<span class="menu-btn" onclick="toggleMenu()">☰</span>
+
 <div class="menu">
 <a href="index.html">الرئيسية</a>
 <a href="services.html">الخدمات</a>
@@ -19,6 +24,7 @@
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <div>
 <h1 id="name" class="main-name"></h1>
@@ -26,6 +32,7 @@
 </div>
 </section>
 
+<!-- SERVICES -->
 <section>
 <h2 class="section-title">🔥 خدماتي</h2>
 <div class="cards">
@@ -35,6 +42,7 @@
 </div>
 </section>
 
+<!-- PORTFOLIO -->
 <section>
 <h2 class="section-title">🎨 أعمالي</h2>
 <div class="cards">
@@ -44,11 +52,13 @@
 </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
 <h2>ابدأ مشروعك الآن</h2>
 <button onclick="location.href='contact.html'">تواصل معي</button>
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
