@@ -2,9 +2,11 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>طلب موقع</title>
+
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -14,9 +16,9 @@
 
 <form onsubmit="sendWhatsApp(); return false;">
 
-<input type="text" id="name" placeholder="اسمك" required><br><br>
-<input type="text" id="service" placeholder="نوع الموقع" required><br><br>
-<textarea id="details" placeholder="تفاصيل"></textarea><br><br>
+<input type="text" id="name" placeholder="اسمك"><br><br>
+<input type="text" id="service" placeholder="نوع الموقع"><br><br>
+<textarea id="details"></textarea><br><br>
 
 <button class="btn">إرسال</button>
 
@@ -24,7 +26,18 @@
 
 </section>
 
-<a href="https://wa.me/213673757838" class="whatsapp-float">💬</a>
+<div class="floating">
+<i class="fa-solid fa-comments main-btn"></i>
+
+<div class="floating-menu">
+<a href="https://wa.me/213673757838"><i class="fab fa-whatsapp"></i></a>
+<a href="https://instagram.com/sb_chahin_40"><i class="fab fa-instagram"></i></a>
+<a href="https://facebook.com/sebaa.chahin"><i class="fab fa-facebook"></i></a>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 <script>
 function sendWhatsApp(){
