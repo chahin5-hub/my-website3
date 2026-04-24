@@ -1,65 +1,159 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شاهين | Web Design</title>
+<title>شاهين لتصميم المواقع</title>
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
 
-<!-- ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+/* NAVBAR */
+nav {
+    background: #111;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00c6ff;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+/* SECTION */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* BUTTON */
+button {
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-<h2>شاهين</h2>
-<div>
-<a href="index.html">الرئيسية</a>
-<a href="pricing.html">الأسعار</a>
-<a href="contact.html">تواصل</a>
-</div>
+    <h2>🌐 شاهين</h2>
+    <div>
+        <a href="#">الرئيسية</a>
+        <a href="#">الخدمات</a>
+        <a href="#">تواصل</a>
+    </div>
 </nav>
 
-<section class="hero">
-<h1>مصمم مواقع احترافي 🚀</h1>
-<p>أحول فكرتك إلى موقع حقيقي يجلب لك الزبائن</p>
+<!-- HERO -->
+<div class="hero">
+    <h1>تصميم مواقع احترافية</h1>
+    <p>أبني لك موقعك الخاص بأفضل تصميم</p>
+    <button onclick="alert('راسلني الآن 🚀')">ابدأ الآن</button>
+</div>
 
-<a href="pricing.html" class="btn">ابدأ الآن</a>
+<!-- ABOUT -->
+<section>
+    <h2>من أنا؟</h2>
+    <p>أنا شاهين، مطور مواقع أساعدك على إنشاء موقعك بسهولة وبشكل احترافي.</p>
 </section>
 
-<!-- الخدمات -->
-<section class="section">
-<h2>خدماتي 🔥</h2>
+<!-- SERVICES -->
+<section>
+    <h2>خدماتي</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🌐 موقع شخصي</h3>
+            <p>موقع يعرض معلوماتك</p>
+        </div>
 
-<div class="cards">
-<div class="card">
-<h3>تصميم مواقع</h3>
-<p>مواقع سريعة واحترافية</p>
-</div>
+        <div class="card">
+            <h3>💼 موقع أعمال</h3>
+            <p>موقع لشركتك أو مشروعك</p>
+        </div>
 
-<div class="card">
-<h3>تصميم UI</h3>
-<p>تصميم عصري جذاب</p>
-</div>
-
-<div class="card">
-<h3>سرعة عالية</h3>
-<p>تحميل سريع جداً</p>
-</div>
-</div>
+        <div class="card">
+            <h3>⚡ موقع سريع</h3>
+            <p>أداء عالي وسريع</p>
+        </div>
+    </div>
 </section>
 
-<!-- زر عائم -->
-<div class="floating">
-<a href="https://wa.me/213673757838" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-facebook"></i></a>
-</div>
+<!-- CONTACT -->
+<section>
+    <h2>تواصل معي</h2>
+    <button onclick="alert('واتساب 📱')">راسلني</button>
+</section>
 
-<script src="js/script.js"></script>
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 شاهين - جميع الحقوق محفوظة</p>
+</footer>
 
 </body>
 </html>
