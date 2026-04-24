@@ -1,97 +1,43 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>تواصل معي</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#0f172a;
-color:white;
-text-align:center;
-}
-
-/* SECTION */
-.section{
-padding:80px 20px;
-}
-
-/* TITLE */
-h1{
-margin-bottom:30px;
-}
-
-/* BOX */
-.contact-box{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-max-width:400px;
-margin:auto;
-}
-
-/* BUTTON */
-.btn{
-display:block;
-margin:15px 0;
-padding:12px;
-border-radius:25px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-}
-
-/* COLORS */
-.phone{ background:#2563eb; }
-.whatsapp{ background:#25d366; }
-.facebook{ background:#1877f2; }
-.instagram{ background:linear-gradient(45deg,#feda75,#d62976,#962fbf); }
-
-.btn:hover{
-opacity:0.8;
-}
-
-</style>
-
+<title>طلب موقع</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <section class="section">
+<h2>📩 اطلب موقعك</h2>
 
-<h1>📞 تواصل معي</h1>
+<form onsubmit="sendWhatsApp(); return false;">
 
-<div class="contact-box">
+<input type="text" id="name" placeholder="اسمك" required><br><br>
 
-<!-- رقمك -->
-<a class="btn phone" href="tel:0673757838">
-📱 اتصل بي: 0673757838
-</a>
+<input type="text" id="service" placeholder="نوع الموقع" required><br><br>
 
-<!-- واتساب -->
-<a class="btn whatsapp" href="https://wa.me/213673757838?text=مرحبا أريد تصميم موقع">
-💬 واتساب
-</a>
+<textarea id="details" placeholder="تفاصيل"></textarea><br><br>
 
-<!-- فيسبوك -->
-<a class="btn facebook" href="https://facebook.com/sebaa chahin" target="_blank">
-📘 فيسبوك
-</a>
+<button class="btn">إرسال</button>
 
-<!-- انستغرام -->
-<a class="btn instagram" href="https://instagram.com/sb_chahin_40" target="_blank">
-📸 إنستغرام
-</a>
-
-</div>
+</form>
 
 </section>
+
+<a href="https://wa.me/213673757838" class="whatsapp-float">💬</a>
+
+<script>
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let service=document.getElementById("service").value;
+let details=document.getElementById("details").value;
+
+let msg=`مرحبا اسمي ${name}%0Aأريد ${service}%0A${details}`;
+window.open(`https://wa.me/213673757838?text=${msg}`);
+}
+</script>
 
 </body>
 </html>
