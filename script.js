@@ -1,24 +1,24 @@
 
-// اسم متحرك
+// typing effect
 const text="شاهين";
 let i=0;
 const el=document.getElementById("name");
 
 function typing(){
 if(el && i<text.length){
-el.innerHTML+=text[i];
+el.innerHTML+=text.charAt(i);
 i++;
 setTimeout(typing,150);
 }
 }
 typing();
 
-// القائمة
+// menu
 function toggleMenu(){
 document.querySelector(".menu").classList.toggle("active");
 }
 
-// دارك مود
+// dark mode
 function toggleDark(){
 document.body.classList.toggle("dark");
 }
