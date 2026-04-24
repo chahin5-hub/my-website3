@@ -1,4 +1,3 @@
-// typing
 const text="شاهين";
 let i=0;
 const el=document.getElementById("name");
@@ -11,8 +10,3 @@ setTimeout(typing,150);
 }
 }
 typing();
-
-// menu
-function toggleMenu(){
-document.querySelector(".menu").classList.toggle("active");
-}
