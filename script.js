@@ -1,5 +1,5 @@
 
-  // typing name
+// كتابة الاسم
 const text="شاهين";
 let i=0;
 const el=document.getElementById("name");
@@ -12,6 +12,11 @@ function typing(){
     }
 }
 typing();
+
+// menu mobile
+function toggleMenu(){
+    document.querySelector(".menu").classList.toggle("active");
+}
 
 // fade animation
 const elements=document.querySelectorAll(".fade-in");
