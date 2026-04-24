@@ -1,46 +1,83 @@
 
-
 body{
 margin:0;
-font-family:sans-serif;
+font-family:Arial;
 background:#0f172a;
 color:white;
 }
 
+/* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-padding:15px 30px;
-background:#111827;
+align-items:center;
+padding:15px 40px;
+background:#020617;
+position:fixed;
+width:100%;
+z-index:1000;
+}
+
+.menu{
+display:flex;
+gap:20px;
 }
 
 .menu a{
 color:white;
-margin:0 10px;
 text-decoration:none;
 }
 
+.menu-btn{
+display:none;
+cursor:pointer;
+}
+
+.toggle{
+cursor:pointer;
+}
+
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:center;
-text-align:center;
+align-items:center;
 background:linear-gradient(135deg,#ff5a3c,#ff9966);
+text-align:center;
 }
 
-.hero.small{
-height:50vh;
+.hero h1{
+font-size:60px;
+animation:glow 2s infinite alternate;
 }
 
-.main-name{
-font-size:50px;
+@keyframes glow{
+from{ text-shadow:0 0 10px white;}
+to{ text-shadow:0 0 30px yellow;}
 }
 
+.btn{
+background:white;
+color:#ff5a3c;
+padding:10px 20px;
+border-radius:20px;
+text-decoration:none;
+margin-top:15px;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+/* CARDS */
 .cards{
 display:flex;
-gap:20px;
 justify-content:center;
+gap:20px;
 flex-wrap:wrap;
 }
 
@@ -48,34 +85,43 @@ flex-wrap:wrap;
 background:#1e293b;
 padding:20px;
 border-radius:15px;
-width:250px;
+transition:0.3s;
 }
 
-.btn{
-background:#ff5a3c;
-padding:10px 20px;
-color:white;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
+.card:hover{
+transform:translateY(-10px);
 }
 
+/* CTA */
 .cta{
 background:#ff5a3c;
+padding:50px;
 text-align:center;
-padding:40px;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#25d366;
-padding:15px;
-border-radius:50%;
+/* DARK MODE */
+.dark{
+background:black;
+color:white;
 }
 
-/* موبايل */
+/* MOBILE */
 @media(max-width:768px){
-.cards{flex-direction:column;}
+.menu{
+display:none;
+flex-direction:column;
+background:#020617;
+position:absolute;
+top:60px;
+right:0;
+width:100%;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
 }
