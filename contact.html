@@ -1,58 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>طلب موقع</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>تواصل</title>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
+<nav>
+<h2>شاهين</h2>
+<div>
+<a href="index.html">الرئيسية</a>
+<a href="pricing.html">الأسعار</a>
+<a href="contact.html">تواصل</a>
+</div>
+</nav>
+
 <section class="section">
-<h2>📩 اطلب موقعك</h2>
+<h2>تواصل معي</h2>
 
-<form onsubmit="sendWhatsApp(); return false;">
+<p>📞 0673757838</p>
+<p>📷 Instagram: sb_chahin_40</p>
+<p>📘 Facebook: sebaa chahin</p>
 
-<input type="text" id="name" placeholder="اسمك"><br><br>
-<input type="text" id="service" placeholder="نوع الموقع"><br><br>
-<textarea id="details"></textarea><br><br>
-
-<button class="btn">إرسال</button>
-
-</form>
+<a href="https://wa.me/213673757838" class="btn">واتساب</a>
 
 </section>
 
-<div class="floating">
-<i class="fa-solid fa-comments main-btn"></i>
-
-<div class="floating-menu">
-<a href="https://wa.me/213673757838"><i class="fab fa-whatsapp"></i></a>
-<a href="https://instagram.com/sb_chahin_40"><i class="fab fa-instagram"></i></a>
-<a href="https://facebook.com/sebaa.chahin"><i class="fab fa-facebook"></i></a>
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-<script>
-function sendWhatsApp(){
-let name=document.getElementById("name").value;
-let service=document.getElementById("service").value;
-let details=document.getElementById("details").value;
-
-let msg=`مرحبا اسمي ${name}%0Aأريد ${service}%0A${details}`;
-window.open(`https://wa.me/213673757838?text=${msg}`);
-}
-</script>
-
 </body>
 </html>
-
-
-
