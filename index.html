@@ -1,70 +1,136 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>شاهين | مصمم مواقع</title>
+<title>الباقات | شاهين</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
 
+body{
+    margin:0;
+    font-family:'Cairo',sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    margin-top:60px;
+    font-size:30px;
+}
+
+/* PRICING */
+.pricing{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:60px 20px;
+}
+
+/* CARD */
+.card{
+    background:#1e293b;
+    width:260px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+/* TITLE */
+.card h3{
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+/* PRICE */
+.card h2{
+    color:#f97316;
+    margin:20px 0;
+    font-size:26px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    background:white;
+    color:#f97316;
+    padding:10px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#f97316;
+    color:white;
+}
+
+/* VIP SPECIAL */
+.vip{
+    border:2px solid #f97316;
+    transform:scale(1.05);
+}
+
+.vip:hover{
+    transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .pricing{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<nav>
-<h2 class="logo">شاهين</h2>
+<h1 class="title">💰 الباقات</h1>
 
-<div class="menu">
-<a href="index.html">الرئيسية</a>
-<a href="pricing.html">الأسعار</a>
-<a href="contact.html">اطلب الآن</a>
-</div>
-</nav>
+<section class="pricing">
 
-<!-- HERO -->
-<section class="hero">
-<h1 id="name"></h1>
-<p>🚀 أصمم مواقع احترافية تجلب لك الزبائن</p>
-<a href="pricing.html" class="btn">ابدأ الآن</a>
+    <!-- عادية -->
+    <div class="card">
+        <h3>عادية</h3>
+        <h2>0.5 مليون دج</h2>
+        <p>موقع بسيط + تصميم جيد</p>
+        <a class="btn" href="https://wa.me/213673757838?text=طلب باقة عادية">اطلب</a>
+    </div>
+
+    <!-- احترافية -->
+    <div class="card">
+        <h3>احترافية</h3>
+        <h2>1 مليون دج</h2>
+        <p>تصميم احترافي + سرعة عالية</p>
+        <a class="btn" href="https://wa.me/213673757838?text=طلب باقة احترافية">اطلب</a>
+    </div>
+
+    <!-- VIP -->
+    <div class="card vip">
+        <h3>VIP</h3>
+        <h2>2 مليون دج</h2>
+        <p>موقع كامل + دعم + إضافات</p>
+        <a class="btn" href="https://wa.me/213673757838?text=طلب VIP">اطلب</a>
+    </div>
+
 </section>
-
-<!-- WHY -->
-<section class="section">
-<h2>🎯 لماذا تختارني؟</h2>
-
-<div class="cards">
-<div class="card"><i class="fa-solid fa-bolt"></i> سرعة</div>
-<div class="card"><i class="fa-solid fa-palette"></i> تصميم</div>
-<div class="card"><i class="fa-solid fa-headset"></i> دعم</div>
-</div>
-
-</section>
-
-<!-- SOCIAL -->
-<div class="social">
-<a href="https://wa.me/213673757838"><i class="fab fa-whatsapp"></i></a>
-<a href="https://instagram.com/sb_chahin_40"><i class="fab fa-instagram"></i></a>
-<a href="https://facebook.com/sebaa.chahin"><i class="fab fa-facebook"></i></a>
-</div>
-
-<!-- FLOAT BUTTON -->
-<div class="floating">
-<i class="fa-solid fa-comments main-btn"></i>
-
-<div class="floating-menu">
-<a href="https://wa.me/213673757838"><i class="fab fa-whatsapp"></i></a>
-<a href="https://instagram.com/sb_chahin_40"><i class="fab fa-instagram"></i></a>
-<a href="https://facebook.com/sebaa.chahin"><i class="fab fa-facebook"></i></a>
-</div>
-
-</div>
-
-<script src="script.js"></script>
 
 </body>
 </html>
