@@ -1,49 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>شاهين</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaheen Platform 👑</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="cursor"></div>
+
+<!-- NAV -->
 <nav>
+<h2 class="logo">شاهين</h2>
 
-<h2>شاهين</h2>
-
-<!-- زر الموبايل -->
-<span class="menu-btn" onclick="toggleMenu()">☰</span>
-
-<!-- القائمة -->
 <div class="menu">
-    <a href="index.html">الرئيسية</a>
-    <a href="services.html">الخدمات</a>
-    <a href="portfolio.html">الأعمال</a>
-    <a href="about.html">من أنا</a>
-    <a href="contact.html">تواصل</a>
+<a href="#">الرئيسية</a>
+<a href="#">الخدمات</a>
+<a href="#">أعمالي</a>
+<a href="#">تواصل</a>
 </div>
 
-<!-- الوضع الليلي -->
-<span class="toggle" onclick="toggleDark()">🌙</span>
-
+<button class="btn">ابدأ الآن</button>
 </nav>
 
-<!-- زر الوضع الليلي -->
-<span class="toggle" onclick="toggleDark()">🌙</span>
-
-</nav>
-</nav>
-
+<!-- HERO -->
 <section class="hero">
 <div>
-<h1 id="name" class="main-name"></h1>
-<p>مصمم مواقع احترافية 🚀</p>
+<h1 class="neon">SHAHEEN</h1>
+<p id="typing"></p>
 </div>
 </section>
 
-<a class="whatsapp" href="https://wa.me/213XXXXXXXXX">💬</a>
+<!-- SERVICES -->
+<section class="section">
+<h2>🔥 خدماتي</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>تصميم مواقع</h3>
+<p>مواقع احترافية بسرعة عالية</p>
+<button>اطلب الآن</button>
+</div>
+
+<div class="card">
+<h3>متاجر إلكترونية</h3>
+<p>بيع منتجاتك بسهولة</p>
+<button>اطلب الآن</button>
+</div>
+
+<div class="card">
+<h3>تصميم UI</h3>
+<p>تصميم عصري جذاب</p>
+<button>اطلب الآن</button>
+</div>
+
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section">
+<h2>🎨 أعمالي</h2>
+
+<div class="cards">
+<div class="card">مشروع 1</div>
+<div class="card">مشروع 2</div>
+<div class="card">مشروع 3</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>جاهز تبدأ مشروعك؟</h2>
+<button>تواصل معي</button>
+</section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
