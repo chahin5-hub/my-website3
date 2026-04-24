@@ -1,159 +1,176 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>شاهين لتصميم المواقع</title>
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial;
-    background: #f5f5f5;
 }
 
-/* NAVBAR */
-nav {
-    background: #111;
-    color: white;
-    padding: 15px;
+body {
+    background: #f5f7fa;
+}
+
+/* الهيدر */
+header {
+    background: white;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-nav h2 {
-    margin: 0;
+header h1 {
+    color: #333;
 }
 
-nav a {
+.btn {
+    background: #25D366;
     color: white;
-    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
     text-decoration: none;
 }
 
-nav a:hover {
-    color: #00c6ff;
-}
-
-/* HERO */
+/* القسم الرئيسي */
 .hero {
-    background: linear-gradient(to right, #007bff, #00c6ff);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-.hero h1 {
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h2 {
     font-size: 40px;
+    margin-bottom: 20px;
 }
 
-/* SECTION */
-section {
-    padding: 40px;
+.hero-text p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 400px;
+}
+
+/* الخدمات */
+.services {
+    padding: 50px;
     text-align: center;
 }
 
-/* CARDS */
 .cards {
     display: flex;
-    justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
 }
 
 .card {
     background: white;
     padding: 20px;
     width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* نموذج التواصل */
+.contact {
+    background: white;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    border: 1px solid #ccc;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-/* BUTTON */
 button {
-    padding: 12px 25px;
-    background: #007bff;
+    padding: 10px 30px;
+    background: #ff5a3c;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-/* FOOTER */
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <h2>🌐 شاهين</h2>
-    <div>
-        <a href="#">الرئيسية</a>
-        <a href="#">الخدمات</a>
-        <a href="#">تواصل</a>
+<header>
+    <h1>🌐 شاهين</h1>
+    <a href="#" class="btn">تواصل واتساب</a>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>مصمم ومطور مواقع جاهز لخدمتك</h2>
+        <p>أساعدك على إنشاء موقع احترافي وجذاب بسرعة وسهولة.</p>
+        <a href="#" class="btn">ابدأ الآن</a>
     </div>
-</nav>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>تصميم مواقع احترافية</h1>
-    <p>أبني لك موقعك الخاص بأفضل تصميم</p>
-    <button onclick="alert('راسلني الآن 🚀')">ابدأ الآن</button>
-</div>
-
-<!-- ABOUT -->
-<section>
-    <h2>من أنا؟</h2>
-    <p>أنا شاهين، مطور مواقع أساعدك على إنشاء موقعك بسهولة وبشكل احترافي.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png">
 </section>
 
-<!-- SERVICES -->
-<section>
+<section class="services">
     <h2>خدماتي</h2>
+
     <div class="cards">
         <div class="card">
-            <h3>🌐 موقع شخصي</h3>
-            <p>موقع يعرض معلوماتك</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+            <h3>مواقع أعمال</h3>
+            <p>موقع احترافي لشركتك يجذب العملاء</p>
         </div>
 
         <div class="card">
-            <h3>💼 موقع أعمال</h3>
-            <p>موقع لشركتك أو مشروعك</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png">
+            <h3>صفحات شخصية</h3>
+            <p>أنشئ صفحتك الخاصة بسهولة</p>
         </div>
 
         <div class="card">
-            <h3>⚡ موقع سريع</h3>
-            <p>أداء عالي وسريع</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+            <h3>تطبيقات بسيطة</h3>
+            <p>مواقع تفاعلية وجذابة</p>
         </div>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section>
+<section class="contact">
     <h2>تواصل معي</h2>
-    <button onclick="alert('واتساب 📱')">راسلني</button>
+    <input type="text" placeholder="اسمك">
+    <br>
+    <input type="email" placeholder="بريدك الإلكتروني">
+    <br>
+    <textarea placeholder="رسالتك"></textarea>
+    <br>
+    <button onclick="alert('تم الإرسال!')">إرسال</button>
 </section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 شاهين - جميع الحقوق محفوظة</p>
-</footer>
 
 </body>
 </html>
