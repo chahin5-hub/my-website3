@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>عرض خاص | شاهين</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+}
+
+/* TITLE */
+h1{
+    margin-top:40px;
+}
+
+/* COUNTDOWN */
+.countdown{
+    font-size:30px;
+    color:#f97316;
+    margin:20px;
+}
+
+/* PRICING */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    width:250px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    background:white;
+    color:#f97316;
+    padding:10px 20px;
+    border-radius:20px;
+    text-decoration:none;
+}
+
+/* ALERT */
+.alert{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#22c55e;
+    padding:10px 20px;
+    border-radius:10px;
+    display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🔥 عرض محدود اليوم فقط</h1>
+
+<div class="countdown" id="timer">00:00</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>عادية</h3>
+<h2>0.5 مليون</h2>
+<a class="btn" onclick="order('عادية')">اطلب</a>
+</div>
+
+<div class="card">
+<h3>احترافية</h3>
+<h2>1 مليون</h2>
+<a class="btn" onclick="order('احترافية')">اطلب</a>
+</div>
+
+<div class="card">
+<h3>VIP</h3>
+<h2>2 مليون</h2>
+<a class="btn" onclick="order('VIP')">اطلب</a>
+</div>
+
+</div>
+
+<div class="alert" id="alert">✔ تم تحويلك للواتساب</div>
+
+<script>
+
+// COUNTDOWN
+let time = 300; // 5 دقائق
+
+setInterval(()=>{
+    let min = Math.floor(time/60);
+    let sec = time%60;
+
+    document.getElementById("timer").innerHTML = 
+    min + ":" + (sec<10?"0"+sec:sec);
+
+    if(time>0) time--;
+},1000);
+
+// ORDER
+function order(plan){
+    document.getElementById("alert").style.display="block";
+
+    setTimeout(()=>{
+        window.open(`https://wa.me/213673757838?text=أريد باقة ${plan}`);
+    },1000);
+}
+
+</script>
+
+</body>
+</html>
