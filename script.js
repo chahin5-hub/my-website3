@@ -1,31 +1,24 @@
 
-// كتابة الاسم
+// اسم متحرك
 const text="شاهين";
 let i=0;
 const el=document.getElementById("name");
 
 function typing(){
-    if(el && i<text.length){
-        el.innerHTML+=text.charAt(i);
-        i++;
-        setTimeout(typing,150);
-    }
+if(el && i<text.length){
+el.innerHTML+=text[i];
+i++;
+setTimeout(typing,150);
+}
 }
 typing();
 
-// menu mobile
+// القائمة
 function toggleMenu(){
-    document.querySelector(".menu").classList.toggle("active");
+document.querySelector(".menu").classList.toggle("active");
 }
 
-// fade animation
-const elements=document.querySelectorAll(".fade-in");
-
-window.addEventListener("scroll",()=>{
-    elements.forEach(el=>{
-        const pos=el.getBoundingClientRect().top;
-        if(pos < window.innerHeight - 100){
-            el.classList.add("show");
-        }
-    });
-});
+// دارك مود
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
