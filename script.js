@@ -12,27 +12,14 @@ setTimeout(typing,150);
 }
 typing();
 
-// menu
-function toggleMenu(){
-document.querySelector(".menu").classList.toggle("active");
-}
-
-// dark mode
-function toggleDark(){
-document.body.classList.toggle("dark");
-}
-
-// scroll reveal
+// animation scroll
 window.addEventListener("scroll",()=>{
-document.querySelectorAll(".reveal").forEach(el=>{
-const top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-el.classList.add("active");
+document.querySelectorAll(".card").forEach(el=>{
+let top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-50){
+el.style.opacity=1;
+el.style.transform="translateY(0)";
 }
 });
 });
 
-// scroll top
-function scrollTopBtn(){
-window.scrollTo({top:0,behavior:"smooth"});
-}
