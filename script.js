@@ -10,17 +10,29 @@ function typing(){
         setTimeout(typing,120);
     }
 }
-typing();
+if(el) typing();
 
-// Scroll animation
-const elements = document.querySelectorAll('.section');
-window.addEventListener('scroll',()=>{
-    elements.forEach(el=>{
-        if(el.getBoundingClientRect().top < window.innerHeight - 100){
-            el.style.opacity = 1;
-            el.style.transform = "translateY(0)";
-        }
-    });
+// DARK MODE
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+// Navbar scroll
+window.addEventListener("scroll",()=>{
+    const nav = document.querySelector("nav");
+    if(window.scrollY > 50){
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
 });
 
+// Cursor
+const cursor = document.createElement("div");
+cursor.classList.add("cursor");
+document.body.appendChild(cursor);
 
+document.addEventListener("mousemove",(e)=>{
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
