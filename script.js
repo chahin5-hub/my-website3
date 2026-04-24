@@ -12,14 +12,8 @@ setTimeout(typing,150);
 }
 typing();
 
-// animation scroll
-window.addEventListener("scroll",()=>{
-document.querySelectorAll(".card").forEach(el=>{
-let top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-50){
-el.style.opacity=1;
-el.style.transform="translateY(0)";
-}
-});
-});
-
+// floating toggle
+document.querySelector(".main-btn").onclick = () => {
+let menu = document.querySelector(".floating-menu");
+menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+};
