@@ -18,14 +18,16 @@
     </div>
 </nav>
 
-<div class="container">
-    <h1>تواصل معي</h1>
+<section class="container">
+    <h1>تواصل معي 📩</h1>
 
-    <input placeholder="اسمك"><br><br>
-    <input placeholder="بريدك"><br><br>
-    <textarea placeholder="رسالتك"></textarea><br><br>
-    <button>إرسال</button>
-</div>
+    <form onsubmit="event.preventDefault(); alert('تم الإرسال بنجاح ✅');">
+        <input type="text" placeholder="اسمك" required>
+        <input type="email" placeholder="بريدك الإلكتروني" required>
+        <textarea placeholder="رسالتك"></textarea>
+        <button>إرسال</button>
+    </form>
+</section>
 
 </body>
 </html>
