@@ -6,219 +6,216 @@
 
 <title>من أنا | شاهين</title>
 
-<!-- خط احترافي -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
+/* ====== GLOBAL ====== */
 body{
     margin:0;
     font-family:'Cairo',sans-serif;
-    background:#f5f7fa;
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* ====== BACKGROUND ANIMATION ====== */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background: radial-gradient(circle, #ff5a3c33, transparent);
+    animation: moveBg 10s linear infinite;
+    z-index:-1;
+}
+
+@keyframes moveBg{
+    0%{transform:translate(0,0);}
+    50%{transform:translate(-25%, -25%);}
+    100%{transform:translate(0,0);}
+}
+
+/* ===== NAVBAR ===== */
 nav{
     position:fixed;
     width:100%;
-    background:white;
     display:flex;
     justify-content:space-between;
-    align-items:center;
     padding:15px 40px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    z-index:1000;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
 }
 
 nav h2{
     color:#ff5a3c;
 }
 
-.menu a{
-    margin:0 10px;
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-}
-
-.menu a:hover{
-    color:#ff5a3c;
-}
-
-/* HERO (من أنا) */
-.about-hero{
+/* ===== HERO ===== */
+.hero{
     height:100vh;
-    background: linear-gradient(135deg, #ff5a3c, #ff7b54);
-    color:white;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
 }
 
-.about-hero h1{
+/* NEON NAME */
+.name{
     font-size:60px;
-    margin-bottom:20px;
+    color:#fff;
+    text-shadow:
+    0 0 10px #ff5a3c,
+    0 0 20px #ff5a3c,
+    0 0 40px #ff5a3c;
 }
 
-.about-hero p{
-    max-width:800px;
-    font-size:22px;
-    line-height:1.9;
+/* ===== TYPING ===== */
+.typing{
+    font-size:25px;
+    margin-top:15px;
+    color:#ccc;
 }
 
-/* SECTION */
+/* ===== SECTION ===== */
 .section{
     padding:80px 20px;
     text-align:center;
+    opacity:0;
+    transform:translateY(50px);
+    transition:0.6s;
 }
 
-/* CARDS */
+.section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===== CARDS ===== */
 .cards{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
     gap:20px;
+    flex-wrap:wrap;
 }
 
 .card{
-    background:white;
-    padding:30px;
+    background:#1e293b;
+    padding:25px;
     width:260px;
     border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.03);
+    transform:scale(1.1);
+    box-shadow:0 0 20px #ff5a3c;
 }
 
-/* SKILLS */
+/* ===== SKILLS ===== */
 .skill{
-    margin:15px auto;
     width:80%;
-    background:#ddd;
+    margin:15px auto;
+    background:#333;
     border-radius:10px;
 }
 
 .skill span{
     display:block;
-    height:12px;
+    height:10px;
     background:#ff5a3c;
     border-radius:10px;
 }
 
-/* CTA */
+/* ===== CTA ===== */
 .cta{
     background:#ff5a3c;
-    color:white;
+    padding:50px;
     text-align:center;
-    padding:60px 20px;
 }
 
-.cta button{
+button{
     padding:15px 30px;
     border:none;
-    border-radius:30px;
-    background:white;
-    color:#ff5a3c;
-    font-size:18px;
-    font-weight:bold;
+    border-radius:25px;
+    background:black;
+    color:white;
     cursor:pointer;
-    transition:0.3s;
 }
 
-.cta button:hover{
-    background:#333;
-    color:white;
+/* ===== CURSOR ===== */
+.cursor{
+    width:20px;
+    height:20px;
+    border:2px solid #ff5a3c;
+    border-radius:50%;
+    position:fixed;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- NAV -->
+<div class="cursor"></div>
+
 <nav>
-    <h2>شاهين</h2>
-    <div class="menu">
-        <a href="index.html">الرئيسية</a>
-        <a href="services.html">الخدمات</a>
-        <a href="portfolio.html">أعمالي</a>
-        <a href="contact.html">تواصل</a>
-    </div>
+<h2>شاهين</h2>
 </nav>
 
 <!-- HERO -->
-<section class="about-hero">
-    <div>
-        <h1>من أنا؟</h1>
-        <p>
-            أنا شاهين، مبرمج ومصمم مواقع. أساعدك على إنشاء موقعك الخاص بسهولة
-            واحترافية، بأسعار في متناول الجميع. هدفي أن أحول فكرتك إلى موقع جميل،
-            سريع، وسهل الاستخدام، لتفتخر بمشاركته مع عملائك وأصدقائك.
-        </p>
-    </div>
+<section class="hero">
+<div>
+<h1 class="name">شاهين</h1>
+<p class="typing" id="typing"></p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+<h2>من أنا؟</h2>
+<p>
+أنا شاهين، مطور ومصمم مواقع. أحول أفكارك إلى مواقع احترافية
+بشكل عصري وسريع لجذب العملاء.
+</p>
 </section>
 
 <!-- SKILLS -->
 <section class="section">
-    <h2>مهاراتي 💡</h2>
+<h2>مهاراتي</h2>
 
-    <div class="skill"><span style="width:95%"></span></div>
-    <p>تصميم مواقع احترافية</p>
+<div class="skill"><span style="width:95%"></span></div>
+<p>تصميم مواقع</p>
 
-    <div class="skill"><span style="width:85%"></span></div>
-    <p>HTML & CSS</p>
+<div class="skill"><span style="width:85%"></span></div>
+<p>HTML & CSS</p>
 
-    <div class="skill"><span style="width:75%"></span></div>
-    <p>JavaScript</p>
+<div class="skill"><span style="width:75%"></span></div>
+<p>JavaScript</p>
+
 </section>
 
 <!-- SERVICES -->
 <section class="section">
-    <h2>ماذا أقدم؟</h2>
+<h2>خدماتي</h2>
 
-    <div class="cards">
+<div class="cards">
+<div class="card">💻 مواقع احترافية</div>
+<div class="card">🎨 تصميم عصري</div>
+<div class="card">🚀 سرعة عالية</div>
+</div>
 
-        <div class="card">
-            <h3>مواقع شركات</h3>
-            <p>تصميم احترافي يعكس هوية شركتك ويجذب العملاء</p>
-        </div>
-
-        <div class="card">
-            <h3>مواقع شخصية</h3>
-            <p>اعرض نفسك وخدماتك بشكل احترافي</p>
-        </div>
-
-        <div class="card">
-            <h3>متاجر إلكترونية</h3>
-            <p>بيع منتجاتك بسهولة عبر الإنترنت</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- WHY ME -->
-<section class="section">
-    <h2>لماذا تختارني؟</h2>
-
-    <div class="cards">
-        <div class="card">⚡ سرعة في التنفيذ</div>
-        <div class="card">🎨 تصميم عصري وجذاب</div>
-        <div class="card">💬 دعم مستمر</div>
-    </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-    <h2>هل تريد موقع احترافي؟</h2>
-    <p>ابدأ الآن وسأساعدك في بناء موقعك</p>
-    <button onclick="window.location.href='contact.html'">تواصل معي</button>
+<h2>ابدأ مشروعك الآن</h2>
+<button onclick="window.location.href='contact.html'">تواصل معي</button>
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
