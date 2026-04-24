@@ -32,6 +32,12 @@ background:linear-gradient(135deg,#ff5a3c,#ff9966);
 
 .hero h1{
 font-size:50px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px white;}
+to{ text-shadow:0 0 40px yellow;}
 }
 
 /* BUTTON */
@@ -60,6 +66,23 @@ flex-wrap:wrap;
 background:#1e293b;
 padding:20px;
 border-radius:10px;
+transition:0.3s;
+}
+
+.card h1{
+font-size:40px;
+color:#ff5a3c;
+}
+
+.card:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px rgba(255,90,60,0.5);
+}
+
+/* CTA */
+.cta{
+background:#ff5a3c;
+padding:60px;
 }
 
 /* WHATSAPP */
