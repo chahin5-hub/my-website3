@@ -1,211 +1,89 @@
-/* ====== GENERAL ====== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
 body{
-    background:#f5f7fa;
-    color:#333;
-    transition:0.3s;
+margin:0;
+font-family:'Cairo',sans-serif;
+background:#0f172a;
+color:white;
 }
 
-/* ====== DARK MODE ====== */
-.dark{
-    background:#0f172a;
-    color:#eee;
-}
-
-/* ====== NAV ====== */
+/* NAV */
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    z-index:1000;
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
+background:#020617;
 }
 
-.dark nav{
-    background:#1e293b;
-}
-
-nav h2{
-    font-size:22px;
-    color:#ff5a3c;
-}
-
-/* MENU */
-.menu{
-    display:flex;
-    gap:20px;
+.logo{
+color:#ff5a3c;
 }
 
 .menu a{
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-    transition:0.3s;
+margin:0 10px;
+color:white;
+text-decoration:none;
 }
 
-.menu a:hover{
-    color:#ff5a3c;
+.btn{
+background:#ff5a3c;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+color:white;
 }
 
-/* MENU BTN */
-.menu-btn{
-    display:none;
-    font-size:24px;
-    cursor:pointer;
-}
-
-/* TOGGLE */
-.toggle{
-    cursor:pointer;
-    font-size:20px;
-}
-
-/* ====== HERO ====== */
+/* HERO */
 .hero{
-    height:100vh;
-    background:linear-gradient(135deg,#ff5a3c,#ff9966);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
 
-.main-name{
-    font-size:60px;
-    margin-bottom:10px;
-    animation: glow 2s infinite alternate;
+.neon{
+font-size:60px;
+text-shadow:0 0 20px #ff5a3c;
 }
 
-@keyframes glow{
-    from{ text-shadow:0 0 10px #fff; }
-    to{ text-shadow:0 0 25px #fff; }
-}
-
-.hero button{
-    margin-top:20px;
-    padding:12px 30px;
-    border:none;
-    border-radius:30px;
-    background:white;
-    color:#ff5a3c;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.hero button:hover{
-    transform:scale(1.1);
-}
-
-/* ====== SECTION ====== */
+/* SECTION */
 .section{
-    padding:80px 20px;
-    text-align:center;
+padding:80px 20px;
+text-align:center;
 }
 
-.section h2{
-    margin-bottom:40px;
-    font-size:28px;
-}
-
-/* ====== CARDS ====== */
+/* CARDS */
 .cards{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    width:260px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    transition:0.3s;
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.03);
+transform:scale(1.1);
+box-shadow:0 0 20px #ff5a3c;
 }
 
-/* ====== CTA ====== */
+/* CTA */
 .cta{
-    background:#ff5a3c;
-    color:white;
-    padding:60px 20px;
-    text-align:center;
+background:#ff5a3c;
+padding:50px;
+text-align:center;
 }
 
-.cta button{
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    border-radius:30px;
-    background:white;
-    color:#ff5a3c;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* ====== WHATSAPP ====== */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#25d366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:20px;
-    text-decoration:none;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* ====== RESPONSIVE ====== */
-@media(max-width:768px){
-
-    nav{
-        padding:15px;
-    }
-
-    .menu{
-        display:none;
-        flex-direction:column;
-        background:white;
-        position:absolute;
-        top:60px;
-        right:10px;
-        padding:15px;
-        border-radius:10px;
-    }
-
-    .menu.active{
-        display:flex;
-    }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .main-name{
-        font-size:40px;
-    }
-
-    .hero{
-        height:80vh;
-    }
-
+/* CURSOR */
+.cursor{
+width:20px;
+height:20px;
+border:2px solid #ff5a3c;
+border-radius:50%;
+position:fixed;
+pointer-events:none;
 }
