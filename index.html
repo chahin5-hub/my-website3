@@ -2,20 +2,14 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شاهين | مصمم مواقع</title>
+<title>شاهين</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="cursor"></div>
-
 <nav>
-<h2 class="logo">شاهين</h2>
-
-<span class="menu-btn" onclick="toggleMenu()">☰</span>
-
+<h2>شاهين</h2>
 <div class="menu">
 <a href="index.html">الرئيسية</a>
 <a href="services.html">الخدمات</a>
@@ -23,47 +17,38 @@
 <a href="about.html">من أنا</a>
 <a href="contact.html">تواصل</a>
 </div>
-
-<span class="toggle" onclick="toggleDark()">🌙</span>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
 <div>
-<h1 class="neon" id="name"></h1>
-<p id="typing"></p>
+<h1 id="name" class="main-name"></h1>
+<p>مصمم مواقع احترافية 🚀</p>
 </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section">
-<h2>خدماتي 🔥</h2>
-
+<section>
+<h2 class="section-title">🔥 خدماتي</h2>
 <div class="cards">
-<div class="card">💻 تصميم مواقع</div>
-<div class="card">🎨 تصميم احترافي</div>
-<div class="card">🚀 سرعة عالية</div>
+<div class="card fade-in">تصميم مواقع</div>
+<div class="card fade-in">سرعة عالية</div>
+<div class="card fade-in">تصميم عصري</div>
 </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="section">
-<h2>أعمالي 🎨</h2>
-
+<section>
+<h2 class="section-title">🎨 أعمالي</h2>
 <div class="cards">
-<div class="card">مشروع 1</div>
-<div class="card">مشروع 2</div>
-<div class="card">مشروع 3</div>
+<div class="card fade-in">مشروع 1</div>
+<div class="card fade-in">مشروع 2</div>
+<div class="card fade-in">مشروع 3</div>
 </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
 <h2>ابدأ مشروعك الآن</h2>
-<button onclick="window.location.href='contact.html'">تواصل معي</button>
+<button onclick="location.href='contact.html'">تواصل معي</button>
 </section>
 
 <script src="script.js"></script>
-
 </body>
 </html>
