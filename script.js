@@ -1,21 +1,30 @@
-// typing
-const text = "منصة تصميم مواقع احترافية 👑";
-let i = 0;
-const el = document.getElementById("typing");
+// كتابة الاسم
+const text="شاهين";
+let i=0;
+const el=document.getElementById("name");
 
-function type(){
-if(i < text.length){
-el.innerHTML += text.charAt(i);
-i++;
-setTimeout(type,80);
+function typing(){
+    if(el && i<text.length){
+        el.innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(typing,150);
+    }
 }
+typing();
+
+// menu mobile
+function toggleMenu(){
+    document.querySelector(".menu").classList.toggle("active");
 }
-type();
 
-// cursor
-const cursor = document.querySelector(".cursor");
+// fade animation
+const elements=document.querySelectorAll(".fade-in");
 
-document.addEventListener("mousemove", e=>{
-cursor.style.left = e.clientX+"px";
-cursor.style.top = e.clientY+"px";
+window.addEventListener("scroll",()=>{
+    elements.forEach(el=>{
+        const pos=el.getBoundingClientRect().top;
+        if(pos < window.innerHeight - 100){
+            el.classList.add("show");
+        }
+    });
 });
