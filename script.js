@@ -1,19 +1,12 @@
-// typing
-const text="شاهين";
-let i=0;
-const el=document.getElementById("name");
+const elements = document.querySelectorAll('.hidden');
 
-function typing(){
-if(el && i<text.length){
-el.innerHTML+=text.charAt(i);
-i++;
-setTimeout(typing,150);
-}
-}
-typing();
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const screen = window.innerHeight;
 
-// floating toggle
-document.querySelector(".main-btn").onclick = () => {
-let menu = document.querySelector(".floating-menu");
-menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-};
+        if (position < screen - 100) {
+            el.classList.add('show');
+        }
+    });
+});
