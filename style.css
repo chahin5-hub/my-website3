@@ -1,9 +1,9 @@
-
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
     font-family:'Cairo',sans-serif;
     background:#f5f7fa;
+    transition:0.3s;
 }
 
 /* NAV */
@@ -19,11 +19,7 @@ nav{
     z-index:1000;
 }
 
-nav a{
-    margin:0 10px;
-    text-decoration:none;
-    color:#333;
-}
+nav a{margin:0 10px;text-decoration:none;color:#333}
 
 /* HERO */
 .hero{
@@ -37,32 +33,27 @@ nav a{
     justify-content:center;
     text-align:center;
     color:white;
-    overflow:hidden;
 }
 
-/* اسم نيون */
+/* اسم */
 .main-name{
     font-size:70px;
     letter-spacing:5px;
-    color:#fff;
-    text-shadow:0 0 10px #fff,0 0 20px #ff5a3c,0 0 40px #ff5a3c;
+    text-shadow:0 0 10px #fff,0 0 40px #ff5a3c;
     animation:float 3s infinite,neon 1.5s infinite alternate;
 }
 
-/* حركة */
 @keyframes float{
     0%{transform:translateY(0)}
     50%{transform:translateY(-15px)}
     100%{transform:translateY(0)}
 }
 
-/* نيون */
 @keyframes neon{
     from{text-shadow:0 0 10px #ff5a3c}
     to{text-shadow:0 0 30px #ff9966}
 }
 
-/* خلفية */
 @keyframes gradientBG{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -85,7 +76,7 @@ nav a{
 }
 .card:hover{transform:translateY(-10px)}
 
-/* Contact */
+/* Form */
 input,textarea{
     width:80%;
     padding:10px;
@@ -100,6 +91,29 @@ button{
     color:white;
     border:none;
     border-radius:10px;
+}
+
+/* Dark */
+.dark{background:#111;color:white}
+.dark nav{background:#222}
+.dark .card{background:#1a1a1a}
+
+/* Toggle */
+.toggle{
+    cursor:pointer;
+    background:#ff5a3c;
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+}
+
+/* Cursor */
+.cursor{
+    width:20px;height:20px;
+    border:2px solid #ff5a3c;
+    border-radius:50%;
+    position:fixed;
+    pointer-events:none;
 }
 
 /* WhatsApp */
