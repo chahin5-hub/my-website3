@@ -1,6 +1,6 @@
 body{
 margin:0;
-font-family:'Cairo',sans-serif;
+font-family:Arial;
 background:#0f172a;
 color:white;
 }
@@ -13,23 +13,14 @@ padding:15px 40px;
 background:#020617;
 }
 
-.logo{
-color:#ff5a3c;
-}
+.logo{color:#ff5a3c;}
 
-.menu a{
-margin:0 10px;
-color:white;
-text-decoration:none;
-}
+.menu{display:flex; gap:15px;}
+.menu a{color:white; text-decoration:none;}
 
-.btn{
-background:#ff5a3c;
-border:none;
-padding:10px 20px;
-border-radius:20px;
-color:white;
-}
+.menu-btn{display:none; cursor:pointer;}
+
+.toggle{cursor:pointer;}
 
 /* HERO */
 .hero{
@@ -41,7 +32,7 @@ text-align:center;
 }
 
 .neon{
-font-size:60px;
+font-size:50px;
 text-shadow:0 0 20px #ff5a3c;
 }
 
@@ -71,10 +62,18 @@ transform:scale(1.1);
 box-shadow:0 0 20px #ff5a3c;
 }
 
+/* FORM */
+input, textarea{
+display:block;
+margin:10px auto;
+padding:10px;
+width:80%;
+}
+
 /* CTA */
 .cta{
 background:#ff5a3c;
-padding:50px;
+padding:40px;
 text-align:center;
 }
 
@@ -86,4 +85,9 @@ border:2px solid #ff5a3c;
 border-radius:50%;
 position:fixed;
 pointer-events:none;
+}
+
+/* DARK MODE */
+.dark{
+background:black;
 }
