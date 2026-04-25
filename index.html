@@ -63,6 +63,7 @@ nav a{
     color:#ff5c3a;
     cursor:pointer;
     font-size:16px;
+    text-decoration:none;
 }
 
 /* خدمات */
@@ -82,6 +83,49 @@ nav a{
     background:#1c2b3f;
     padding:20px;
     border-radius:10px;
+}
+
+/* ===== الأعمال الاحترافية ===== */
+.portfolio{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.project{
+    background:#1c2b3f;
+    border-radius:15px;
+    overflow:hidden;
+    width:300px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+}
+
+.project img{
+    width:100%;
+}
+
+.project h3{
+    margin:10px 0;
+}
+
+.project p{
+    font-size:14px;
+    padding:0 10px;
+}
+
+.project .btn{
+    display:inline-block;
+    margin:15px;
+    padding:10px 20px;
+    background:#ff7b42;
+    color:#fff;
+    border-radius:20px;
 }
 
 </style>
@@ -106,9 +150,7 @@ nav a{
 <h1>شاهين</h1>
 <p>🚀 مصمم مواقع احترافية</p>
 
-<!-- الزر المهم -->
 <button class="btn" onclick="goPricing()">ابدأ الآن</button>
-
 </div>
 
 <!-- الخدمات -->
@@ -123,14 +165,33 @@ nav a{
 
 </div>
 
-<!-- أعمال -->
+<!-- الأعمال -->
 <div class="section" id="work">
 <h2>🎨 أعمالي</h2>
 
-<div class="boxes">
-<div class="box">مشروع 1</div>
-<div class="box">مشروع 2</div>
-<div class="box">مشروع 3</div>
+<div class="portfolio">
+
+<div class="project">
+<img src="https://via.placeholder.com/300x200">
+<h3>موقع شركة</h3>
+<p>تصميم موقع احترافي لشركة خدمات</p>
+<a href="#" class="btn">عرض</a>
+</div>
+
+<div class="project">
+<img src="https://via.placeholder.com/300x200">
+<h3>متجر إلكتروني</h3>
+<p>متجر كامل مع نظام طلب</p>
+<a href="#" class="btn">عرض</a>
+</div>
+
+<div class="project">
+<img src="https://via.placeholder.com/300x200">
+<h3>موقع شخصي</h3>
+<p>موقع عصري وسريع</p>
+<a href="#" class="btn">عرض</a>
+</div>
+
 </div>
 
 </div>
