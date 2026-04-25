@@ -1,177 +1,129 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>الباقات | شاهين</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<title>الباقات</title>
 
 <style>
 
+/* ===== عام ===== */
 body{
     margin:0;
-    font-family:'Cairo',sans-serif;
-    background:#0f172a;
-    color:white;
+    font-family: Arial;
+    background:#0b1a2a;
+    color:#fff;
+    direction: rtl;
 }
 
-/* NAV */
-nav{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 40px;
-    background:#020617;
+.container{
+    width:90%;
+    margin:auto;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 10px;
-}
-
-/* TITLE */
+/* ===== العنوان ===== */
 .title{
     text-align:center;
-    margin-top:40px;
-    font-size:30px;
+    margin-top:50px;
+    font-size:40px;
 }
 
-/* PRICING */
+/* ===== الباقات ===== */
 .pricing{
     display:flex;
     justify-content:center;
-    gap:25px;
+    gap:30px;
+    margin-top:50px;
     flex-wrap:wrap;
-    padding:60px 20px;
 }
 
-/* CARD */
 .card{
-    background:#1e293b;
-    width:260px;
+    background:#1c2b3f;
     padding:30px;
     border-radius:15px;
+    width:250px;
     text-align:center;
-    position:relative;
     transition:0.3s;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    opacity:0;
-    transform:translateY(40px);
-    animation:fadeUp 0.8s forwards;
-}
-
-.card:nth-child(2){
-    animation-delay:0.2s;
-}
-.card:nth-child(3){
-    animation-delay:0.4s;
-}
-
-@keyframes fadeUp{
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    position:relative;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.05);
+    transform:translateY(-10px);
 }
 
-/* POPULAR */
-.popular{
-    border:2px solid #22c55e;
-    transform:scale(1.07);
+/* الباقة المميزة */
+.card.active{
+    border:2px solid #00ff88;
 }
 
 .badge{
     position:absolute;
     top:-10px;
-    right:15px;
-    background:#22c55e;
-    padding:5px 12px;
-    border-radius:20px;
+    right:20px;
+    background:#00ff88;
+    color:#000;
+    padding:5px 10px;
+    border-radius:10px;
     font-size:12px;
 }
 
-/* PRICE */
-.card h2{
-    color:#f97316;
+.price{
+    color:#ff7b42;
+    font-size:25px;
+    margin:15px 0;
 }
 
-/* BUTTON */
 .btn{
-    display:inline-block;
-    margin-top:15px;
-    background:white;
-    color:#f97316;
+    background:#eee;
+    color:#ff7b42;
     padding:10px 20px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:bold;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
     transition:0.3s;
 }
 
 .btn:hover{
-    background:#f97316;
-    color:white;
+    background:#ff7b42;
+    color:#fff;
 }
 
-/* TABLE */
-.compare{
-    width:90%;
-    margin:40px auto;
+/* ===== الجدول ===== */
+.table{
+    margin-top:70px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
     border-collapse:collapse;
-    text-align:center;
 }
 
-.compare td, .compare th{
-    border:1px solid #334155;
-    padding:10px;
-}
-
-/* REVIEWS */
-.reviews{
-    text-align:center;
-    padding:40px;
-}
-
-.review{
-    background:#1e293b;
-    margin:10px auto;
+th, td{
     padding:15px;
-    width:250px;
-    border-radius:10px;
-}
-
-/* SOCIAL */
-.social{
     text-align:center;
-    margin:30px;
+    border:1px solid #2c3e50;
 }
 
-.social a{
-    font-size:25px;
-    margin:10px;
-    text-decoration:none;
+th{
+    background:#13263a;
 }
 
-/* WHATSAPP FLOAT */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:22px;
-    text-decoration:none;
+td{
+    background:#0f2233;
 }
 
-/* RESPONSIVE */
+.check{
+    color:#00ff88;
+    font-weight:bold;
+}
+
+.cross{
+    color:red;
+    font-weight:bold;
+}
+
+/* ===== موبايل ===== */
 @media(max-width:768px){
     .pricing{
         flex-direction:column;
@@ -180,74 +132,104 @@ nav a{
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-<div>شاهين</div>
-<div>
-<a href="index.html">الرئيسية</a>
-<a href="services.html">الخدمات</a>
-<a href="portfolio.html">الأعمال</a>
-<a href="contact.html">تواصل</a>
-</div>
-</nav>
+<div class="container">
 
 <h1 class="title">💰 الباقات</h1>
 
-<!-- PRICING -->
-<section class="pricing">
-
-<div class="card">
-<h3>عادية</h3>
-<h2>0.5 مليون دج</h2>
-<p>موقع بسيط</p>
-<a class="btn" href="https://wa.me/213673757838?text=أريد باقة عادية">اطلب</a>
-</div>
-
-<div class="card popular">
-<span class="badge">🔥 الأكثر طلباً</span>
-<h3>احترافية</h3>
-<h2>1 مليون دج</h2>
-<p>تصميم احترافي + سرعة</p>
-<a class="btn" href="https://wa.me/213673757838?text=أريد باقة احترافية">اطلب</a>
-</div>
+<!-- ===== الباقات ===== -->
+<div class="pricing">
 
 <div class="card">
 <h3>VIP</h3>
-<h2>2 مليون دج</h2>
+<p class="price">2 مليون دج</p>
 <p>موقع كامل + دعم</p>
-<a class="btn" href="https://wa.me/213673757838?text=أريد VIP">اطلب</a>
+<button class="btn" onclick="order('VIP')">اطلب</button>
 </div>
 
-</section>
+<div class="card active">
+<span class="badge">🔥 الأكثر طلباً</span>
+<h3>احترافية</h3>
+<p class="price">1 مليون دج</p>
+<p>تصميم احترافي + سرعة</p>
+<button class="btn" onclick="order('احترافية')">اطلب</button>
+</div>
 
-<!-- COMPARE -->
-<table class="compare">
-<tr><th>الميزة</th><th>عادية</th><th>احترافية</th><th>VIP</th></tr>
-<tr><td>تصميم</td><td>✔</td><td>✔✔</td><td>✔✔✔</td></tr>
-<tr><td>سرعة</td><td>عادي</td><td>جيد</td><td>سريع جداً</td></tr>
-<tr><td>دعم</td><td>❌</td><td>✔</td><td>✔✔</td></tr>
+<div class="card">
+<h3>عادية</h3>
+<p class="price">0.5 مليون دج</p>
+<p>موقع بسيط</p>
+<button class="btn" onclick="order('عادية')">اطلب</button>
+</div>
+
+</div>
+
+<!-- ===== جدول المقارنة ===== -->
+<div class="table">
+
+<table>
+
+<tr>
+<th>الميزة</th>
+<th>عادية</th>
+<th>احترافية</th>
+<th>VIP</th>
+</tr>
+
+<tr>
+<td>تصميم</td>
+<td class="check">✔</td>
+<td class="check">✔✔</td>
+<td class="check">✔✔✔</td>
+</tr>
+
+<tr>
+<td>السرعة</td>
+<td>عادي</td>
+<td>جيد</td>
+<td>سريع جداً</td>
+</tr>
+
+<tr>
+<td>الدعم</td>
+<td class="cross">✖</td>
+<td class="check">✔</td>
+<td class="check">✔✔</td>
+</tr>
+
+<tr>
+<td>SEO</td>
+<td class="cross">✖</td>
+<td class="check">✔</td>
+<td class="check">✔✔</td>
+</tr>
+
+<tr>
+<td>تعديلات</td>
+<td>محدود</td>
+<td>متوسط</td>
+<td>غير محدود</td>
+</tr>
+
 </table>
 
-<!-- REVIEWS -->
-<section class="reviews">
-<h2>⭐ آراء العملاء</h2>
-<div class="review">⭐⭐⭐⭐⭐ خدمة ممتازة</div>
-<div class="review">⭐⭐⭐⭐⭐ تصميم رائع</div>
-<div class="review">⭐⭐⭐⭐⭐ أنصح به</div>
-</section>
-
-<!-- SOCIAL -->
-<div class="social">
-<a href="https://instagram.com/sb_chahin_40">📸</a>
-<a href="#">📘</a>
 </div>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/213673757838" class="whatsapp">💬</a>
+</div>
+
+<!-- ===== سكربت الطلب ===== -->
+<script>
+function order(plan){
+    let phone = "213673757838"; // رقمك بدون صفر
+    let message = "السلام عليكم، أريد طلب باقة " + plan;
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
