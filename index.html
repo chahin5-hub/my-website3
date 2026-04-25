@@ -1,136 +1,145 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>الباقات | شاهين</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<title>شاهين</title>
 
 <style>
-
 body{
     margin:0;
-    font-family:'Cairo',sans-serif;
-    background:#0f172a;
-    color:white;
+    font-family:Arial;
+    direction:rtl;
+    background:#0b1a2a;
+    color:#fff;
 }
 
-/* TITLE */
-.title{
+/* النافبار */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 30px;
+    background:#eee;
+    color:#000;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#000;
+}
+
+/* الهيرو */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff7b42,#ff5c3a);
     text-align:center;
-    margin-top:60px;
-    font-size:30px;
 }
 
-/* PRICING */
-.pricing{
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* زر */
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:20px;
+    background:#fff;
+    color:#ff5c3a;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* خدمات */
+.section{
+    padding:60px;
+    text-align:center;
+}
+
+.boxes{
     display:flex;
     justify-content:center;
-    gap:25px;
+    gap:20px;
     flex-wrap:wrap;
-    padding:60px 20px;
 }
 
-/* CARD */
-.card{
-    background:#1e293b;
-    width:260px;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-    transition:0.3s;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
-.card:hover{
-    transform:translateY(-10px) scale(1.03);
-}
-
-/* TITLE */
-.card h3{
-    margin-bottom:10px;
-    font-size:22px;
-}
-
-/* PRICE */
-.card h2{
-    color:#f97316;
-    margin:20px 0;
-    font-size:26px;
-}
-
-/* BUTTON */
-.btn{
-    display:inline-block;
-    background:white;
-    color:#f97316;
-    padding:10px 20px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#f97316;
-    color:white;
-}
-
-/* VIP SPECIAL */
-.vip{
-    border:2px solid #f97316;
-    transform:scale(1.05);
-}
-
-.vip:hover{
-    transform:scale(1.1);
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    .pricing{
-        flex-direction:column;
-        align-items:center;
-    }
+.box{
+    background:#1c2b3f;
+    padding:20px;
+    border-radius:10px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<h1 class="title">💰 الباقات</h1>
+<!-- navbar -->
+<nav>
+<h2>شاهين</h2>
+<ul>
+<li><a href="#">الرئيسية</a></li>
+<li><a href="#services">الخدمات</a></li>
+<li><a href="#work">الأعمال</a></li>
+<li><a href="#">تواصل</a></li>
+</ul>
+</nav>
 
-<section class="pricing">
+<!-- hero -->
+<div class="hero">
+<h1>شاهين</h1>
+<p>🚀 مصمم مواقع احترافية</p>
 
-    <!-- عادية -->
-    <div class="card">
-        <h3>عادية</h3>
-        <h2>0.5 مليون دج</h2>
-        <p>موقع بسيط + تصميم جيد</p>
-        <a class="btn" href="https://wa.me/213673757838?text=طلب باقة عادية">اطلب</a>
-    </div>
+<!-- الزر المهم -->
+<button class="btn" onclick="goPricing()">ابدأ الآن</button>
 
-    <!-- احترافية -->
-    <div class="card">
-        <h3>احترافية</h3>
-        <h2>1 مليون دج</h2>
-        <p>تصميم احترافي + سرعة عالية</p>
-        <a class="btn" href="https://wa.me/213673757838?text=طلب باقة احترافية">اطلب</a>
-    </div>
+</div>
 
-    <!-- VIP -->
-    <div class="card vip">
-        <h3>VIP</h3>
-        <h2>2 مليون دج</h2>
-        <p>موقع كامل + دعم + إضافات</p>
-        <a class="btn" href="https://wa.me/213673757838?text=طلب VIP">اطلب</a>
-    </div>
+<!-- الخدمات -->
+<div class="section" id="services">
+<h2>🔥 خدماتي</h2>
 
-</section>
+<div class="boxes">
+<div class="box">💻 تصميم مواقع</div>
+<div class="box">🎨 تصميم احترافي</div>
+<div class="box">🚀 سرعة عالية</div>
+</div>
+
+</div>
+
+<!-- أعمال -->
+<div class="section" id="work">
+<h2>🎨 أعمالي</h2>
+
+<div class="boxes">
+<div class="box">مشروع 1</div>
+<div class="box">مشروع 2</div>
+<div class="box">مشروع 3</div>
+</div>
+
+</div>
+
+<script>
+function goPricing(){
+    window.location.href = "pricing.html";
+}
+</script>
 
 </body>
 </html>
