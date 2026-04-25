@@ -1,235 +1,54 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الباقات</title>
 
-<style>
+<title>الأسعار</title>
+<link rel="stylesheet" href="css/style.css">
 
-/* ===== عام ===== */
-body{
-    margin:0;
-    font-family: Arial;
-    background:#0b1a2a;
-    color:#fff;
-    direction: rtl;
-}
-
-.container{
-    width:90%;
-    margin:auto;
-}
-
-/* ===== العنوان ===== */
-.title{
-    text-align:center;
-    margin-top:50px;
-    font-size:40px;
-}
-
-/* ===== الباقات ===== */
-.pricing{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    margin-top:50px;
-    flex-wrap:wrap;
-}
-
-.card{
-    background:#1c2b3f;
-    padding:30px;
-    border-radius:15px;
-    width:250px;
-    text-align:center;
-    transition:0.3s;
-    position:relative;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* الباقة المميزة */
-.card.active{
-    border:2px solid #00ff88;
-}
-
-.badge{
-    position:absolute;
-    top:-10px;
-    right:20px;
-    background:#00ff88;
-    color:#000;
-    padding:5px 10px;
-    border-radius:10px;
-    font-size:12px;
-}
-
-.price{
-    color:#ff7b42;
-    font-size:25px;
-    margin:15px 0;
-}
-
-.btn{
-    background:#eee;
-    color:#ff7b42;
-    padding:10px 20px;
-    border:none;
-    border-radius:20px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#ff7b42;
-    color:#fff;
-}
-
-/* ===== الجدول ===== */
-.table{
-    margin-top:70px;
-    overflow-x:auto;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-th, td{
-    padding:15px;
-    text-align:center;
-    border:1px solid #2c3e50;
-}
-
-th{
-    background:#13263a;
-}
-
-td{
-    background:#0f2233;
-}
-
-.check{
-    color:#00ff88;
-    font-weight:bold;
-}
-
-.cross{
-    color:red;
-    font-weight:bold;
-}
-
-/* ===== موبايل ===== */
-@media(max-width:768px){
-    .pricing{
-        flex-direction:column;
-        align-items:center;
-    }
-}
-
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="container">
-
-<h1 class="title">💰 الباقات</h1>
-
-<!-- ===== الباقات ===== -->
-<div class="pricing">
-
-<div class="card">
-<h3>VIP</h3>
-<p class="price">2 مليون دج</p>
-<p>موقع كامل + دعم</p>
-<button class="btn" onclick="order('VIP')">اطلب</button>
+<nav>
+<h2>شاهين</h2>
+<div>
+<a href="index.html">الرئيسية</a>
+<a href="pricing.html">الأسعار</a>
+<a href="contact.html">تواصل</a>
 </div>
+</nav>
 
-<div class="card active">
-<span class="badge">🔥 الأكثر طلباً</span>
-<h3>احترافية</h3>
-<p class="price">1 مليون دج</p>
-<p>تصميم احترافي + سرعة</p>
-<button class="btn" onclick="order('احترافية')">اطلب</button>
-</div>
+<section class="section">
+<h2>الباقات 💰</h2>
+
+<div class="cards">
 
 <div class="card">
 <h3>عادية</h3>
 <p class="price">0.5 مليون دج</p>
-<p>موقع بسيط</p>
-<button class="btn" onclick="order('عادية')">اطلب</button>
+<a href="https://wa.me/213673757838?text=أريد الباقة العادية" class="btn">اطلب</a>
+</div>
+
+<div class="card popular">
+<h3>احترافية</h3>
+<p class="price">1 مليون دج</p>
+<a href="https://wa.me/213673757838?text=أريد الباقة الاحترافية" class="btn">اطلب</a>
+</div>
+
+<div class="card">
+<h3>VIP</h3>
+<p class="price">2 مليون دج</p>
+<a href="https://wa.me/213673757838?text=أريد باقة VIP" class="btn">اطلب</a>
 </div>
 
 </div>
+</section>
 
-<!-- ===== جدول المقارنة ===== -->
-<div class="table">
-
-<table>
-
-<tr>
-<th>الميزة</th>
-<th>عادية</th>
-<th>احترافية</th>
-<th>VIP</th>
-</tr>
-
-<tr>
-<td>تصميم</td>
-<td class="check">✔</td>
-<td class="check">✔✔</td>
-<td class="check">✔✔✔</td>
-</tr>
-
-<tr>
-<td>السرعة</td>
-<td>عادي</td>
-<td>جيد</td>
-<td>سريع جداً</td>
-</tr>
-
-<tr>
-<td>الدعم</td>
-<td class="cross">✖</td>
-<td class="check">✔</td>
-<td class="check">✔✔</td>
-</tr>
-
-<tr>
-<td>SEO</td>
-<td class="cross">✖</td>
-<td class="check">✔</td>
-<td class="check">✔✔</td>
-</tr>
-
-<tr>
-<td>تعديلات</td>
-<td>محدود</td>
-<td>متوسط</td>
-<td>غير محدود</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-<!-- ===== سكربت الطلب ===== -->
-<script>
-function order(plan){
-    let phone = "213673757838"; // رقمك بدون صفر
-    let message = "السلام عليكم، أريد طلب باقة " + plan;
-    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-    window.open(url, "_blank");
-}
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
