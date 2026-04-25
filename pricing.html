@@ -4,51 +4,250 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>الأسعار</title>
-<link rel="stylesheet" href="css/style.css">
+<title>الباقات | شاهين</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
+<style>
+
+body{
+    margin:0;
+    font-family:'Cairo',sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    background:#020617;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    margin-top:40px;
+    font-size:30px;
+}
+
+/* PRICING */
+.pricing{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:60px 20px;
+}
+
+/* CARD */
+.card{
+    background:#1e293b;
+    width:260px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    position:relative;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 0.8s forwards;
+}
+
+.card:nth-child(2){
+    animation-delay:0.2s;
+}
+.card:nth-child(3){
+    animation-delay:0.4s;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+
+/* POPULAR */
+.popular{
+    border:2px solid #22c55e;
+    transform:scale(1.07);
+}
+
+.badge{
+    position:absolute;
+    top:-10px;
+    right:15px;
+    background:#22c55e;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* PRICE */
+.card h2{
+    color:#f97316;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    background:white;
+    color:#f97316;
+    padding:10px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#f97316;
+    color:white;
+}
+
+/* TABLE */
+.compare{
+    width:90%;
+    margin:40px auto;
+    border-collapse:collapse;
+    text-align:center;
+}
+
+.compare td, .compare th{
+    border:1px solid #334155;
+    padding:10px;
+}
+
+/* REVIEWS */
+.reviews{
+    text-align:center;
+    padding:40px;
+}
+
+.review{
+    background:#1e293b;
+    margin:10px auto;
+    padding:15px;
+    width:250px;
+    border-radius:10px;
+}
+
+/* SOCIAL */
+.social{
+    text-align:center;
+    margin:30px;
+}
+
+.social a{
+    font-size:25px;
+    margin:10px;
+    text-decoration:none;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .pricing{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-<h2>شاهين</h2>
+<div>شاهين</div>
 <div>
 <a href="index.html">الرئيسية</a>
-<a href="pricing.html">الأسعار</a>
+<a href="services.html">الخدمات</a>
+<a href="portfolio.html">الأعمال</a>
 <a href="contact.html">تواصل</a>
 </div>
 </nav>
 
-<section class="section">
-<h2>الباقات 💰</h2>
+<h1 class="title">💰 الباقات</h1>
 
-<div class="cards">
+<!-- PRICING -->
+<section class="pricing">
 
 <div class="card">
 <h3>عادية</h3>
-<p class="price">0.5 مليون دج</p>
-<a href="https://wa.me/213673757838?text=أريد الباقة العادية" class="btn">اطلب</a>
+<h2>0.5 مليون دج</h2>
+<p>موقع بسيط</p>
+<a class="btn" href="https://wa.me/213673757838?text=أريد باقة عادية">اطلب</a>
 </div>
 
 <div class="card popular">
+<span class="badge">🔥 الأكثر طلباً</span>
 <h3>احترافية</h3>
-<p class="price">1 مليون دج</p>
-<a href="https://wa.me/213673757838?text=أريد الباقة الاحترافية" class="btn">اطلب</a>
+<h2>1 مليون دج</h2>
+<p>تصميم احترافي + سرعة</p>
+<a class="btn" href="https://wa.me/213673757838?text=أريد باقة احترافية">اطلب</a>
 </div>
 
 <div class="card">
 <h3>VIP</h3>
-<p class="price">2 مليون دج</p>
-<a href="https://wa.me/213673757838?text=أريد باقة VIP" class="btn">اطلب</a>
+<h2>2 مليون دج</h2>
+<p>موقع كامل + دعم</p>
+<a class="btn" href="https://wa.me/213673757838?text=أريد VIP">اطلب</a>
 </div>
 
-</div>
 </section>
 
-<script src="js/script.js"></script>
+<!-- COMPARE -->
+<table class="compare">
+<tr><th>الميزة</th><th>عادية</th><th>احترافية</th><th>VIP</th></tr>
+<tr><td>تصميم</td><td>✔</td><td>✔✔</td><td>✔✔✔</td></tr>
+<tr><td>سرعة</td><td>عادي</td><td>جيد</td><td>سريع جداً</td></tr>
+<tr><td>دعم</td><td>❌</td><td>✔</td><td>✔✔</td></tr>
+</table>
+
+<!-- REVIEWS -->
+<section class="reviews">
+<h2>⭐ آراء العملاء</h2>
+<div class="review">⭐⭐⭐⭐⭐ خدمة ممتازة</div>
+<div class="review">⭐⭐⭐⭐⭐ تصميم رائع</div>
+<div class="review">⭐⭐⭐⭐⭐ أنصح به</div>
+</section>
+
+<!-- SOCIAL -->
+<div class="social">
+<a href="https://instagram.com/sb_chahin_40">📸</a>
+<a href="#">📘</a>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/213673757838" class="whatsapp">💬</a>
 
 </body>
 </html>
