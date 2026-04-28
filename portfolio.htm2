@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أعمالي</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      margin: 0;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      background: #020617;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .card {
+      background: #1e293b;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #38bdf8;
+      padding: 8px 15px;
+      border-radius: 8px;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>أعمالي</h2>
+  <a href="index.html">العودة للرئيسية</a>
+</header>
+
+<div class="projects">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250">
+    <h3>متجر إلكتروني</h3>
+    <p>متجر كامل مع نظام طلبات</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <a class="btn" href="#">عرض المشروع</a>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250">
+    <h3>موقع شركة</h3>
+    <p>تصميم احترافي</p>
+    <p>⭐⭐⭐⭐</p>
+    <a class="btn" href="#">عرض المشروع</a>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250">
+    <h3>موقع شخصي</h3>
+    <p>صفحة تعريفية جذابة</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <a class="btn" href="#">عرض المشروع</a>
+  </div>
+
+</div>
+
+</body>
+</html>
