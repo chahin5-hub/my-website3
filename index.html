@@ -1,206 +1,216 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شاهين</title>
+  <meta charset="UTF-8">
+  <title>موقعي الشخصي</title>
 
-<style>
-body{
-    margin:0;
-    font-family:Arial;
-    direction:rtl;
-    background:#0b1a2a;
-    color:#fff;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
 
-/* النافبار */
-nav{
-    display:flex;
-    justify-content:space-between;
-    padding:15px 30px;
-    background:#eee;
-    color:#000;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #0f172a;
+      color: white;
+    }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:20px;
-}
+    header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      background: #020617;
+    }
 
-nav a{
-    text-decoration:none;
-    color:#000;
-}
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+    }
 
-/* الهيرو */
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff7b42,#ff5c3a);
-    text-align:center;
-}
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-.hero h1{
-    font-size:60px;
-}
+    .hero span {
+      color: #38bdf8;
+    }
 
-.hero p{
-    font-size:20px;
-}
+    .btn {
+      background: #38bdf8;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: black;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
 
-/* زر */
-.btn{
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    border-radius:20px;
-    background:#fff;
-    color:#ff5c3a;
-    cursor:pointer;
-    font-size:16px;
-    text-decoration:none;
-}
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-/* خدمات */
-.section{
-    padding:60px;
-    text-align:center;
-}
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.boxes{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
+    .card {
+      background: #1e293b;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 15px;
+      width: 260px;
+      transition: 0.3s;
+    }
 
-.box{
-    background:#1c2b3f;
-    padding:20px;
-    border-radius:10px;
-}
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-/* ===== الأعمال الاحترافية ===== */
-.portfolio{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-}
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-.project{
-    background:#1c2b3f;
-    border-radius:15px;
-    overflow:hidden;
-    width:300px;
-    text-align:center;
-    transition:0.3s;
-}
+    ul li {
+      margin: 10px 0;
+    }
 
-.project:hover{
-    transform:translateY(-10px);
-}
-
-.project img{
-    width:100%;
-}
-
-.project h3{
-    margin:10px 0;
-}
-
-.project p{
-    font-size:14px;
-    padding:0 10px;
-}
-
-.project .btn{
-    display:inline-block;
-    margin:15px;
-    padding:10px 20px;
-    background:#ff7b42;
-    color:#fff;
-    border-radius:20px;
-}
-
-</style>
-
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- navbar -->
-<nav>
-<h2>شاهين</h2>
-<ul>
-<li><a href="#">الرئيسية</a></li>
-<li><a href="#services">الخدمات</a></li>
-<li><a href="#work">الأعمال</a></li>
-<li><a href="#">تواصل</a></li>
-</ul>
-</nav>
+<header>
+  <h2>شـاهين</h2>
+  <nav>
+    <a href="#about">من أنا</a>
+    <a href="#services">خدماتي</a>
+    <a href="#pricing">الباقات</a>
+    <a href="#reviews">التقييمات</a>
+    <a href="#contact">تواصل</a>
+  </nav>
+</header>
 
-<!-- hero -->
-<div class="hero">
-<h1>شاهين</h1>
-<p>🚀 مصمم مواقع احترافية</p>
+<section class="hero">
+  <h1>أنا <span>مطور مواقع</span></h1>
+  <p>أبني مواقع احترافية ومتاجر إلكترونية</p>
+  <a class="btn" href="#contact">اطلب خدمة</a>
+</section>
 
-<button class="btn" onclick="goPricing()">ابدأ الآن</button>
-</div>
+<section id="about" class="section">
+  <h2>من أنا</h2>
+  <p>أنا مطور مواقع أساعدك في إنشاء موقع أو متجر احترافي لعملك.</p>
+</section>
 
-<!-- الخدمات -->
-<div class="section" id="services">
-<h2>🔥 خدماتي</h2>
+<section id="services" class="section">
+  <h2>خدماتي</h2>
 
-<div class="boxes">
-<div class="box">💻 تصميم مواقع</div>
-<div class="box">🎨 تصميم احترافي</div>
-<div class="box">🚀 سرعة عالية</div>
-</div>
+  <div class="services">
+    <div class="card">
+      <h3>تصميم مواقع</h3>
+      <p>تصميم عصري وجذاب</p>
+    </div>
 
-</div>
+    <div class="card">
+      <h3>متاجر إلكترونية</h3>
+      <p>متجر كامل مع طلبات ودفع</p>
+    </div>
 
-<!-- الأعمال -->
-<div class="section" id="work">
-<h2>🎨 أعمالي</h2>
+    <div class="card">
+      <h3>تطوير مواقع</h3>
+      <p>سرعة وأداء عالي</p>
+    </div>
+  </div>
+</section>
 
-<div class="portfolio">
+<!-- 🛒 الباقات -->
+<section id="pricing" class="section">
+  <h2>الباقات</h2>
 
-<div class="project">
-<img src="https://via.placeholder.com/300x200">
-<h3>موقع شركة</h3>
-<p>تصميم موقع احترافي لشركة خدمات</p>
-<a href="#" class="btn">عرض</a>
-</div>
+  <div class="services">
 
-<div class="project">
-<img src="https://via.placeholder.com/300x200">
-<h3>متجر إلكتروني</h3>
-<p>متجر كامل مع نظام طلب</p>
-<a href="#" class="btn">عرض</a>
-</div>
+    <div class="card">
+      <h3>الباقة الأساسية</h3>
+      <h2>50$</h2>
+      <ul>
+        <li>صفحة واحدة</li>
+        <li>تصميم بسيط</li>
+        <li>متجاوب</li>
+      </ul>
+      <a class="btn" href="#contact">اطلب الآن</a>
+    </div>
 
-<div class="project">
-<img src="https://via.placeholder.com/300x200">
-<h3>موقع شخصي</h3>
-<p>موقع عصري وسريع</p>
-<a href="#" class="btn">عرض</a>
-</div>
+    <div class="card" style="border:2px solid #38bdf8;">
+      <h3>الباقة المتقدمة</h3>
+      <h2>150$</h2>
+      <ul>
+        <li>3 صفحات</li>
+        <li>تصميم احترافي</li>
+        <li>SEO</li>
+      </ul>
+      <a class="btn" href="#contact">اطلب الآن</a>
+    </div>
 
-</div>
+    <div class="card">
+      <h3>الباقة الاحترافية</h3>
+      <h2>300$</h2>
+      <ul>
+        <li>موقع كامل</li>
+        <li>متجر إلكتروني</li>
+        <li>لوحة تحكم</li>
+      </ul>
+      <a class="btn" href="#contact">اطلب الآن</a>
+    </div>
 
-</div>
+  </div>
+</section>
 
-<script>
-function goPricing(){
-    window.location.href = "pricing.html";
-}
-</script>
+<!-- ⭐ التقييمات -->
+<section id="reviews" class="section">
+  <h2>آراء العملاء</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>خدمة رائعة وسريعة!</p>
+      <strong>- أحمد</strong>
+    </div>
+
+    <div class="card">
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>أفضل مما توقعت 🔥</p>
+      <strong>- سارة</strong>
+    </div>
+
+    <div class="card">
+      <p>⭐⭐⭐⭐</p>
+      <p>تعامل ممتاز</p>
+      <strong>- يوسف</strong>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>تواصل معي</h2>
+  <a class="btn" href="https://wa.me/213XXXXXXXXX" target="_blank">
+    واتساب
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 جميع الحقوق محفوظة</p>
+</footer>
 
 </body>
 </html>
